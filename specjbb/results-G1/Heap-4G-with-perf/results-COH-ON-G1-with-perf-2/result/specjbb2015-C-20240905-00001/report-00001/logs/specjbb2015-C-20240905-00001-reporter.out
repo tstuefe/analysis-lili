@@ -1,0 +1,31 @@
+
+SPECjbb2015 Java Business Benchmark
+ (c) Standard Performance Evaluation Corporation, 2015
+
+Preparing to launch SPECjbb2015 reporter.
+
+Reading property file: /shared/projects/openjdk/analysis/lilliput-benefits/specjbb/results-COH-ON-G1-2/./config/specjbb2015.props
+Report directory is result/specjbb2015-C-20240905-00001/report-00001
+  6681s: Building report...
+
+       657 msec: Pre-reading source
+         0 msec: Validation
+         1 msec: Dump run logs
+        63 msec: Building throughput - response time curve
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10793, critical-jOPS = 3982
+        29 msec: Primary metrics calculation
+        95 msec: Render Allowed Failures
+        30 msec: Parsing attributes
+         2 msec: Parsing agent names
+       401 msec: Max Delay during RT curve building
+         0 msec: Printing JbbProperties
+         1 msec: Build report with HW/SW parameters
+       507 msec: Render IR by probes tasks
+         0 msec: Controller time verification
+       608 msec: Render IR/PR Accuracy
+       547 msec: Overall RT curves
+         0 msec: Render RT
+        75 msec: Request Mix accuracy
+         4 msec: Render template to file result/specjbb2015-C-20240905-00001/report-00001/data/specjbb2015-C-20240905-00001-runProperties.txt
+        31 msec: Render template to file result/specjbb2015-C-20240905-00001/report-00001/specjbb2015-C-20240905-00001.html
+Report generation finished. Wallclock = 1533 msecs, real = 3051 msecs, parallelism = 1.99x
