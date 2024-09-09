@@ -1,0 +1,245 @@
+**** COH-OFF *****
+
+Processing results-COH-OFF-G1-with-perf-0/composite.log ...
+Processing results-COH-OFF-G1-with-perf-1/composite.log ...
+Processing results-COH-OFF-G1-with-perf-2/composite.log ...
+Processing results-COH-OFF-G1-with-perf-3/composite.log ...
+Processing results-COH-OFF-G1-with-perf-4/composite.log ...
+Processing results-COH-OFF-G1-with-perf-5/composite.log ...
+Processing results-COH-OFF-G1-with-perf-6/composite.log ...
+Processing results-COH-OFF-G1-with-perf-7/composite.log ...
+Processing results-COH-OFF-G1-with-perf-8/composite.log ...
+
+
+*** results of 9 runs: ***
+
+```
+run,l1-misses,l1-loads,llc-misses,llc-loads,tlb-misses,tlb-loads,instructions,branches,
+0,1221348089717,24347244759109,257313168863,613600225531,36780416545,24140959564522,79838916309622,15033491394731,
+1,1311178277476,25957219151327,282471802746,668359285361,37495818373,25754339356775,85534338702392,16068829278975,
+2,1313797578090,25657480519338,279163680624,663186327005,38256147497,25452664669763,84981781715412,15954409930631,
+3,1332433689422,26304006235557,271731406004,668776912228,38876753367,26095345111884,86714552890269,16273531040734,
+4,1272908101936,25120897498474,270729092619,645831361451,38033105300,24898710310037,82270520528327,15426886308145,
+5,1372619308053,26939312649364,291059571409,700915074515,41547128501,26737607773078,88312450162623,16506182778761,
+6,1234151164520,24534757750967,260166459405,626900605404,35325538481,24361359439453,81072991393876,15238814849030,
+7,1324457553572,26101936552852,280995460726,672801247541,37264560856,25914772975267,85308843852927,15967364755903,
+8,1266378084285,24639618572004,270872377393,636528388119,35888046126,24422854751062,81664764733726,15279902395794,
+```
+
+*** Mean values and deviations for 9 runs: ***
+L1-dcache-load-misses     : 1294363538563.4 	(sstdev 49167667337.6, (3.79%)
+L1-dcache-loads           : 25511385965443.6 	(sstdev 898440969161.7, (3.52%)
+LLC-load-misses           : 273833668865.4 	(sstdev 10802754556.9, (3.94%)
+LLC-loads                 : 655211047461.7 	(sstdev 26899695767.9, (4.10%)
+dTLB-load-misses          : 37718612782.9 	(sstdev 1823474119.3, (4.83%)
+dTLB-loads                : 25308734883537.9 	(sstdev 898687784502.2, (3.55%)
+instructions              : 83966573365463.8 	(sstdev 2857305339219.7, (3.40%)
+branches                  : 15749934748078.2 	(sstdev 516801355516.4, (3.28%)
+
+**** COH-ON *****
+
+Processing results-COH-ON-G1-with-perf-0/composite.log ...
+Processing results-COH-ON-G1-with-perf-1/composite.log ...
+Processing results-COH-ON-G1-with-perf-2/composite.log ...
+Processing results-COH-ON-G1-with-perf-3/composite.log ...
+Processing results-COH-ON-G1-with-perf-4/composite.log ...
+Processing results-COH-ON-G1-with-perf-5/composite.log ...
+Processing results-COH-ON-G1-with-perf-6/composite.log ...
+Processing results-COH-ON-G1-with-perf-7/composite.log ...
+Processing results-COH-ON-G1-with-perf-8/composite.log ...
+
+
+*** results of 9 runs: ***
+
+```
+run,l1-misses,l1-loads,llc-misses,llc-loads,tlb-misses,tlb-loads,instructions,branches,
+0,1112064086563,21781058775155,205109069563,553011961147,33170701913,21606674581940,72587024074013,13179908069825,
+1,1061885694713,20779440048804,213029975785,536575991384,31375959737,20624974079259,69319341038317,12613483749905,
+2,1069854084811,20968187836028,204618720770,537898284989,31958313642,20791990998089,70794475815212,12809754414011,
+3,1089680606689,21306051526976,202710147449,542255591041,32304371916,21138150876829,71883350422923,13153568064113,
+4,1160951121840,22492596609888,224152186774,584898987496,33015222001,22310434153175,75393675035956,13656708663851,
+5,1143936978815,22133486916737,217386272463,576354118650,32990523519,21944746128537,73989122561710,13481266444853,
+6,1143816568764,22357172542403,215008972260,574215151318,33152622774,22179867233483,75223317015359,13714555278221,
+7,1052994474371,20175158883968,208527506811,522383721927,30340734937,19994952309098,67275023031190,12183679752216,
+8,1146164190174,22501377196513,223388101861,572860727368,33101054610,22342162757217,75835229365212,13837041754080,
+```
+
+*** Mean values and deviations for 9 runs: ***
+L1-dcache-load-misses     : 1109038645193.3 	(sstdev 41509450014.3, (3.74%)
+L1-dcache-loads           : 21610503370719.1 	(sstdev 843208207928.7, (3.90%)
+LLC-load-misses           : 212658994859.6 	(sstdev 8007110194.3, (3.76%)
+LLC-loads                 : 555606059480.0 	(sstdev 22070841310.9, (3.97%)
+dTLB-load-misses          : 32378833894.3 	(sstdev 991750143.4, (3.06%)
+dTLB-loads                : 21437105901958.6 	(sstdev 841493397715.4, (3.92%)
+instructions              : 72477839817765.8 	(sstdev 2954662637881.2, (4.07%)
+branches                  : 13181107354563.9 	(sstdev 557542593031.3, (4.22%)
+
+**** COH-OFF *****
+
+Processing results-COH-OFF-G1-with-perf-0/composite.out ...
+Processing results-COH-OFF-G1-with-perf-1/composite.out ...
+Processing results-COH-OFF-G1-with-perf-2/composite.out ...
+Processing results-COH-OFF-G1-with-perf-3/composite.out ...
+Processing results-COH-OFF-G1-with-perf-4/composite.out ...
+Processing results-COH-OFF-G1-with-perf-5/composite.out ...
+Processing results-COH-OFF-G1-with-perf-6/composite.out ...
+Processing results-COH-OFF-G1-with-perf-7/composite.out ...
+Processing results-COH-OFF-G1-with-perf-8/composite.out ...
+
+
+*** results of 9 runs: ***
+
+run,gc-count,usage-pre,usage-post,pause,real,user,sys
+0,4692,3323.1,2124.9,330.681,330.83,1919.28,2.89
+1,5018,3332.8,2129.9,351.046,351.05,2034.72,3.03
+2,5018,3337.7,2143.6,351.416,351.17,2042.44,3.06
+3,5097,3330.9,2134.5,363.083,363.14,2108.31,3.23
+4,4860,3330.6,2128.2,341.993,342.1,1983.27,3
+5,5291,3346.2,2143.6,371.773,372.25,2154.26,3.4
+6,4788,3331.6,2138.0,337.459,337.11,1958.27,3.02
+7,5132,3328.2,2135.2,361.434,361.69,2096.43,3.29
+8,4850,3327.1,2129.9,343.507,343.69,1989.46,2.7
+
+*** Mean values and deviations for 9 runs: ***
+Number of GCs:            : 4971.7777777778 	(sstdev 189.4, (3.80%)
+Usage before GC (MB)      : 3332.0222222222 	(sstdev 6.7, (.20%)
+Usage after GC (MB)       : 2134.2 	(sstdev 6.6, (.30%)
+Sum pause times (seconds) : 350.26577777778 	(sstdev 13.3, (3.79%)
+Sum GC Real (seconds)     : 350.33666666667 	(sstdev 13.4, (3.82%)
+Sum GC User (seconds)     : 2031.8266666667 	(sstdev 76.9, (3.78%)
+Sum GC Sys (seconds)      : 3.0688888888889 	(sstdev 0.2, (6.51%)
+
+**** COH-ON *****
+
+Processing results-COH-ON-G1-with-perf-0/composite.out ...
+Processing results-COH-ON-G1-with-perf-1/composite.out ...
+Processing results-COH-ON-G1-with-perf-2/composite.out ...
+Processing results-COH-ON-G1-with-perf-3/composite.out ...
+Processing results-COH-ON-G1-with-perf-4/composite.out ...
+Processing results-COH-ON-G1-with-perf-5/composite.out ...
+Processing results-COH-ON-G1-with-perf-6/composite.out ...
+Processing results-COH-ON-G1-with-perf-7/composite.out ...
+Processing results-COH-ON-G1-with-perf-8/composite.out ...
+
+
+*** results of 9 runs: ***
+
+run,gc-count,usage-pre,usage-post,pause,real,user,sys
+0,3480,3125.9,1794.1,273.563,274.13,1594.28,2.37
+1,3323,3115.3,1784.1,261.319,261.4,1521.86,2.36
+2,3361,3131.7,1796.1,263.024,263.16,1533.55,1.96
+3,3400,3130.4,1798.5,266.321,266.23,1553.26,2.14
+4,3626,3140.1,1799.7,286.171,286.52,1663.44,2.15
+5,3611,3134.3,1799.5,284.105,284.2,1653.15,2.33
+6,3558,3134.9,1798.3,280.101,280.3,1629.95,2.14
+7,3282,3119.8,1796.0,257.262,257.46,1500.23,2.17
+8,3587,3130.9,1797.4,283.736,283.63,1647.94,2.22
+
+*** Mean values and deviations for 9 runs: ***
+Number of GCs:            : 3469.7777777778 	(sstdev 132.0, (3.80%)
+Usage before GC (MB)      : 3129.2555555556 	(sstdev 7.7, (.24%)
+Usage after GC (MB)       : 1795.9666666667 	(sstdev 4.8, (.26%)
+Sum pause times (seconds) : 272.84466666667 	(sstdev 11.1, (4.06%)
+Sum GC Real (seconds)     : 273.00333333333 	(sstdev 11.1, (4.06%)
+Sum GC User (seconds)     : 1588.6288888889 	(sstdev 62.8, (3.95%)
+Sum GC Sys (seconds)      : 2.2044444444444 	(sstdev 0.1, (4.53%)
+
+**** COH-OFF *****
+
+Processing results-COH-OFF-G1-with-perf-0 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10383, max-jOPS = 10047, critical-jOPS = 3532
+max: 10047 crit: 3532
+Processing results-COH-OFF-G1-with-perf-1 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10532, max-jOPS = 10047, critical-jOPS = 3743
+max: 10047 crit: 3743
+Processing results-COH-OFF-G1-with-perf-2 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10383, max-jOPS = 10162, critical-jOPS = 3860
+max: 10162 crit: 3860
+Processing results-COH-OFF-G1-with-perf-3 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10632, max-jOPS = 10162, critical-jOPS = 3773
+max: 10162 crit: 3773
+Processing results-COH-OFF-G1-with-perf-4 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10532, max-jOPS = 10047, critical-jOPS = 3718
+max: 10047 crit: 3718
+Processing results-COH-OFF-G1-with-perf-5 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10924, max-jOPS = 10393, critical-jOPS = 3736
+max: 10393 crit: 3736
+Processing results-COH-OFF-G1-with-perf-6 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10532, max-jOPS = 10047, critical-jOPS = 3791
+max: 10047 crit: 3791
+Processing results-COH-OFF-G1-with-perf-7 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10532, max-jOPS = 10162, critical-jOPS = 3810
+max: 10162 crit: 3810
+Processing results-COH-OFF-G1-with-perf-8 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10532, max-jOPS = 10162, critical-jOPS = 3715
+max: 10162 crit: 3715
+
+
+*** results of 9 runs: ***
+
+```
+run,maxjops,critjops,
+0,10047,3532,
+1,10047,3743,
+2,10162,3860,
+3,10162,3773,
+4,10047,3718,
+5,10393,3736,
+6,10047,3791,
+7,10162,3810,
+8,10162,3715,
+```
+
+*** Mean values and deviations for 9 runs: ***
+Max jOPS          : 10136.6 	(sstdev 112.0, (1.10%)
+Critical jOPS     : 3742.0 	(sstdev 91.8, (2.45%)
+
+**** COH-ON *****
+
+Processing results-COH-ON-G1-with-perf-0 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10931, critical-jOPS = 3978
+max: 10931 crit: 3978
+Processing results-COH-ON-G1-with-perf-1 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10793, critical-jOPS = 3937
+max: 10793 crit: 3937
+Processing results-COH-ON-G1-with-perf-2 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10793, critical-jOPS = 3982
+max: 10793 crit: 3982
+Processing results-COH-ON-G1-with-perf-3 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10793, critical-jOPS = 4013
+max: 10793 crit: 4013
+Processing results-COH-ON-G1-with-perf-4 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10931, critical-jOPS = 4079
+max: 10931 crit: 4079
+Processing results-COH-ON-G1-with-perf-5 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10931, critical-jOPS = 4092
+max: 10931 crit: 4092
+Processing results-COH-ON-G1-with-perf-6 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10793, critical-jOPS = 3910
+max: 10793 crit: 3910
+Processing results-COH-ON-G1-with-perf-7 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10654, critical-jOPS = 4008
+max: 10654 crit: 4008
+Processing results-COH-ON-G1-with-perf-8 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10793, critical-jOPS = 3961
+max: 10793 crit: 3961
+
+
+*** results of 9 runs: ***
+
+```
+run,maxjops,critjops,
+0,10931,3978,
+1,10793,3937,
+2,10793,3982,
+3,10793,4013,
+4,10931,4079,
+5,10931,4092,
+6,10793,3910,
+7,10654,4008,
+8,10793,3961,
+```
+
+*** Mean values and deviations for 9 runs: ***
+Max jOPS          : 10823.6 	(sstdev 92.2, (.85%)
+Critical jOPS     : 3995.6 	(sstdev 60.4, (1.51%)
