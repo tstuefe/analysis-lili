@@ -127,8 +127,9 @@ done
 
 # $1 what
 # $2 column number in result file
+# $3 precision
 function print_mean_and_sstdev () {
-	local mean=$(tr ',' '\t' < "$resultfile" | datamash --header-in mean $2)
+	local mean=$(tr ',' '\t' < "$resultfile" | datamash --header-in --round $3 mean $2)
 	local sstdev=$(tr ',' '\t' < "$resultfile" | datamash --header-in --round=1 sstdev $2)
 	local sstdev_perc=$(printperc $sstdev $mean)
 	echo "$1 ${mean} 	(sstdev ${sstdev}, (${sstdev_perc}%)"
@@ -143,13 +144,13 @@ cat "$resultfile"
 echo
 echo "*** Mean values and deviations for $RUN runs: ***"
 
-print_mean_and_sstdev "Number of GCs:            :" 2
-print_mean_and_sstdev "Usage before GC (MB)      :" 3
-print_mean_and_sstdev "Usage after GC (MB)       :" 4
-print_mean_and_sstdev "Sum pause times (seconds) :" 5
-print_mean_and_sstdev "Sum GC Real (seconds)     :" 6
-print_mean_and_sstdev "Sum GC User (seconds)     :" 7
-print_mean_and_sstdev "Sum GC Sys (seconds)      :" 8
+print_mean_and_sstdev "Number of GCs:            :" 2 1
+print_mean_and_sstdev "Usage before GC (MB)      :" 3 1
+print_mean_and_sstdev "Usage after GC (MB)       :" 4 1
+print_mean_and_sstdev "Sum pause times (seconds) :" 5 2
+print_mean_and_sstdev "Sum GC Real (seconds)     :" 6 2
+print_mean_and_sstdev "Sum GC User (seconds)     :" 7 2
+print_mean_and_sstdev "Sum GC Sys (seconds)      :" 8 2
 
 
 

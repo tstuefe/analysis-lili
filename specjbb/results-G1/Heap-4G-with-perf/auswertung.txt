@@ -101,13 +101,13 @@ run,gc-count,usage-pre,usage-post,pause,real,user,sys
 8,4850,3327.1,2129.9,343.507,343.69,1989.46,2.7
 
 *** Mean values and deviations for 9 runs: ***
-Number of GCs:            : 4971.7777777778 	(sstdev 189.4, (3.80%)
-Usage before GC (MB)      : 3332.0222222222 	(sstdev 6.7, (.20%)
+Number of GCs:            : 4971.8 	(sstdev 189.4, (3.80%)
+Usage before GC (MB)      : 3332.0 	(sstdev 6.7, (.20%)
 Usage after GC (MB)       : 2134.2 	(sstdev 6.6, (.30%)
-Sum pause times (seconds) : 350.26577777778 	(sstdev 13.3, (3.79%)
-Sum GC Real (seconds)     : 350.33666666667 	(sstdev 13.4, (3.82%)
-Sum GC User (seconds)     : 2031.8266666667 	(sstdev 76.9, (3.78%)
-Sum GC Sys (seconds)      : 3.0688888888889 	(sstdev 0.2, (6.51%)
+Sum pause times (seconds) : 350.27 	(sstdev 13.3, (3.79%)
+Sum GC Real (seconds)     : 350.34 	(sstdev 13.4, (3.82%)
+Sum GC User (seconds)     : 2031.83 	(sstdev 76.9, (3.78%)
+Sum GC Sys (seconds)      : 3.07 	(sstdev 0.2, (6.51%)
 
 **** COH-ON *****
 
@@ -136,13 +136,13 @@ run,gc-count,usage-pre,usage-post,pause,real,user,sys
 8,3587,3130.9,1797.4,283.736,283.63,1647.94,2.22
 
 *** Mean values and deviations for 9 runs: ***
-Number of GCs:            : 3469.7777777778 	(sstdev 132.0, (3.80%)
-Usage before GC (MB)      : 3129.2555555556 	(sstdev 7.7, (.24%)
-Usage after GC (MB)       : 1795.9666666667 	(sstdev 4.8, (.26%)
-Sum pause times (seconds) : 272.84466666667 	(sstdev 11.1, (4.06%)
-Sum GC Real (seconds)     : 273.00333333333 	(sstdev 11.1, (4.06%)
-Sum GC User (seconds)     : 1588.6288888889 	(sstdev 62.8, (3.95%)
-Sum GC Sys (seconds)      : 2.2044444444444 	(sstdev 0.1, (4.53%)
+Number of GCs:            : 3469.8 	(sstdev 132.0, (3.80%)
+Usage before GC (MB)      : 3129.3 	(sstdev 7.7, (.24%)
+Usage after GC (MB)       : 1796.0 	(sstdev 4.8, (.26%)
+Sum pause times (seconds) : 272.84 	(sstdev 11.1, (4.06%)
+Sum GC Real (seconds)     : 273.00 	(sstdev 11.1, (4.06%)
+Sum GC User (seconds)     : 1588.63 	(sstdev 62.8, (3.95%)
+Sum GC Sys (seconds)      : 2.20 	(sstdev 0.1, (4.54%)
 
 **** COH-OFF *****
 
