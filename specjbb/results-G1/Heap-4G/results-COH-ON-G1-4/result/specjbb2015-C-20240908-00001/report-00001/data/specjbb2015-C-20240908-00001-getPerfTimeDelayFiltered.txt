@@ -1,0 +1,14 @@
+Delay between performance status pings above threshold
+===================================
+Domain Marker;Start RT curve;583240.0
+Domain Marker;max-jOPS;6213143.0
+Range Marker;Limit;5000.0
+Range Marker;Hard Limit;60000.0
+Time, msec;Group1.TxInjector.CompositeTxInjector;Group1.Backend.CompositeBackend
+3472.0;1001.4292070000001;1001.446508
+87124.0;5549.867283;5550.303652999995
+305844.0;10574.525070000032;10708.635646999988
+6524568.0;9117.592327999882;9144.336051999591
+6718284.0;10718.370920000598;10718.626175000332
+6764148.0;;1000.2602770002559
+6764149.0;0.2184790000319481;
