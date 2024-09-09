@@ -1,0 +1,112 @@
+-COH:
+  maxjops mean  10231.4
+  critjops mean  3794.2
+
++COH:
+  maxjops mean  10848.2  (+6.03%)
+  critjops mean  4036    (+6.37%)
+
+-------------------------------------------
+
+Processing results-COH-OFF-G1-0 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10632, max-jOPS = 10162, critical-jOPS = 3845
+max: 10162 crit: 3845
+Processing results-COH-OFF-G1-1 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10710, max-jOPS = 10278, critical-jOPS = 3837
+max: 10278 crit: 3837
+Processing results-COH-OFF-G1-2 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10781, max-jOPS = 10162, critical-jOPS = 3709
+max: 10162 crit: 3709
+Processing results-COH-OFF-G1-3 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10710, max-jOPS = 10278, critical-jOPS = 3806
+max: 10278 crit: 3806
+Processing results-COH-OFF-G1-4 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10710, max-jOPS = 10162, critical-jOPS = 3727
+max: 10162 crit: 3727
+Processing results-COH-OFF-G1-5 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10924, max-jOPS = 9931, critical-jOPS = 3835
+max: 9931 crit: 3835
+Processing results-COH-OFF-G1-6 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10710, max-jOPS = 10393, critical-jOPS = 3758
+max: 10393 crit: 3758
+Processing results-COH-OFF-G1-7 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10632, max-jOPS = 10393, critical-jOPS = 3822
+max: 10393 crit: 3822
+Processing results-COH-OFF-G1-8 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10810, max-jOPS = 10393, critical-jOPS = 3899
+max: 10393 crit: 3899
+Processing results-COH-OFF-G1-9 ...
+RUN RESULT: hbIR (max attempted) = 11548, hbIR (settled) = 10532, max-jOPS = 10162, critical-jOPS = 3704
+max: 10162 crit: 3704
+
+
+** results of 10 runs: **
+
+run,maxjops,critjops,
+0,10162,3845,
+1,10278,3837,
+2,10162,3709,
+3,10278,3806,
+4,10162,3727,
+5,9931,3835,
+6,10393,3758,
+7,10393,3822,
+8,10393,3899,
+9,10162,3704,
+
+maxjops mean:    10231.4
+maxjops sstdev:  146.13251216314 (1.42%)
+critjops mean:   3794.2
+critjops sstdev: 65.991245210592 (1.73%)
+
+
+Processing results-COH-ON-G1-0 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10793, critical-jOPS = 4089
+max: 10793 crit: 4089
+Processing results-COH-ON-G1-1 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10793, critical-jOPS = 4021
+max: 10793 crit: 4021
+Processing results-COH-ON-G1-2 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10793, critical-jOPS = 3890
+max: 10793 crit: 3890
+Processing results-COH-ON-G1-3 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 11070, critical-jOPS = 4066
+max: 11070 crit: 4066
+Processing results-COH-ON-G1-4 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10931, critical-jOPS = 4041
+max: 10931 crit: 4041
+Processing results-COH-ON-G1-5 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10654, critical-jOPS = 4122
+max: 10654 crit: 4122
+Processing results-COH-ON-G1-6 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10793, critical-jOPS = 3995
+max: 10793 crit: 3995
+Processing results-COH-ON-G1-7 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 11070, critical-jOPS = 4088
+max: 11070 crit: 4088
+Processing results-COH-ON-G1-8 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10931, critical-jOPS = 4049
+max: 10931 crit: 4049
+Processing results-COH-ON-G1-9 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11548, max-jOPS = 10654, critical-jOPS = 3999
+max: 10654 crit: 3999
+
+
+** results of 10 runs: **
+
+run,maxjops,critjops,
+0,10793,4089,
+1,10793,4021,
+2,10793,3890,
+3,11070,4066,
+4,10931,4041,
+5,10654,4122,
+6,10793,3995,
+7,11070,4088,
+8,10931,4049,
+9,10654,3999,
+
+maxjops mean:    10848.2
+maxjops sstdev:  148.96591705637 (1.37%)
+critjops mean:   4036
+critjops sstdev: 65.484518950835 (1.62%)
