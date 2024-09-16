@@ -82,7 +82,7 @@ for FILE in $*; do
 		exit -1
 	fi
 
-	# Filter out warmup phase, we only want to examine the explicitly issued full gcs
+	# Filter out warmup phase
 	#awk "BEGIN {IN=0} /will start GCs\.\.\./ {IN=1} /after GCs\.\.\./ {IN=0} { if (IN==1) print }" < "${FILE}" > outlog-${LETTER}-no-warmup.txt
 
 	# Now scan for GC pauses 
@@ -108,8 +108,9 @@ for FILE in $*; do
 	gc_real_sum=`datamash --header-in sum 1 < ${tmpf}`
 
 	# Now scan for post-GC liveset sizes
+	# Here, we only count Full GCs, to avoid counting floating garbage 
 	tmpf="${tempdir}/gc-usage-post-${RUN}.txt"
-        ack '\[gc.*GC\(.*Pause.*ms$' ${FILE} | sed 's/.*[M]->\([0-9][0-9]*\)M([0-9]*.*/\1/g' > "$tmpf"
+        ack '\[gc.*GC\(.*Pause Full.*ms$' ${FILE} | sed 's/.*[M]->\([0-9][0-9]*\)M([0-9]*.*/\1/g' > "$tmpf"
 	usage_post_mean=`datamash --header-in --round=1 mean 1 < ${tmpf}`
 
 	# Now scan for pre-GC heap usage

@@ -1,0 +1,1607 @@
+
+SPECjbb2015 Java Business Benchmark
+ (c) Standard Performance Evaluation Corporation, 2015
+
+Preparing to launch All-in-one SPECjbb2015.
+
+Reading property file: /shared/projects/openjdk/analysis/lilliput-benefits/specjbb/results-COH-ON-G1-FullGC-8G-2/./config/specjbb2015.props
+
+     0s: Enumerating plugins...
+     0s:    Connectivity:
+     0s:             HTTP_Grizzly: Grizzly HTTP server, JDK HTTP client
+     0s:              NIO_Grizzly: Grizzly NIO server, Grizzly NIO client
+     0s:               HTTP_Jetty: Jetty HTTP server, JDK HTTP client
+     0s:    Snapshot:
+     0s:                 InMemory: Stores snapshots in heap memory
+     0s:    Data Writers:
+     0s:                     Demo: Send all frame to listener
+     0s:                   InFile: Writing Data into file
+     0s:                   Silent: Drop all frames
+     0s: 
+     0s: Kit validation is skipped.
+     0s: Tests are skipped.
+     0s: 
+     0s: Ladies and gentlemen, this is your Controller speaking.
+     0s: We are delighted in having you for benchmark run today.
+     0s: 
+     0s: Binary log file is ./specjbb2015-C-20240913-00001.data.gz
+     0s: 
+     0s: Performing handshake with all agents ...
+     0s: 
+     0s:  Agent Group1.TxInjector.CompositeTxInjector has attached to Controller
+     0s:  Agent Group1.Backend.CompositeBackend has attached to Controller
+     0s: 
+     0s: All agents have connected.
+     0s: 
+     0s: Attached agents info:
+
+Group "Group1"
+    TxInjectors:
+        CompositeTxInjector, includes { Driver } @ [local in-Java link]
+    Backends:
+        CompositeBackend, includes { SM(2),SP(2) } @ [local in-Java link]
+
+     0s: Initializing... (init) OK
+     2s: 
+     2s: Check whether properties are compliant
+     2s: (validation=PASSED) Property settings are COMPLIANT.
+     2s: 
+     2s: Searching for high-bound for max-jOPS possible for this system
+     2s: Searching from base IR = 100
+     2s:       rampup IR =      0 [reconfig (term) (init) ] ... (rIR:aIR:PR = 0:0:0) (tPR = 0) [OK] 
+     7s:       rampup IR =     10 ... (rIR:aIR:PR = 10:10:10) (tPR = 679) [OK] 
+    10s:       rampup IR =     20 ... (rIR:aIR:PR = 20:20:20) (tPR = 1516) [OK] 
+    13s:       rampup IR =     30 .... (rIR:aIR:PR = 30:30:30) (tPR = 2219) [OK] 
+    17s:       rampup IR =     40 .... (rIR:aIR:PR = 40:40:40) (tPR = 2523) [OK] 
+    21s:       rampup IR =     50 .... (rIR:aIR:PR = 50:47:47) (tPR = 3088) [OK] 
+    25s:       rampup IR =     60 .... (rIR:aIR:PR = 60:62:60) (tPR = 3866) [OK] 
+    29s:       rampup IR =     70 .... (rIR:aIR:PR = 70:70:69) (tPR = 4103) [OK] 
+    33s:       rampup IR =     80 .... (rIR:aIR:PR = 80:78:77) (tPR = 4127) [OK] 
+    37s:       rampup IR =     90 ...... (rIR:aIR:PR = 90:89:87) (tPR = 4140) [OK] 
+    44s:       rampup IR =    100 .... (rIR:aIR:PR = 100:97:94) (tPR = 4265) [OK] 
+    48s:    snapshot, IR =    100 ....|.............................. (rIR:aIR:PR = 100:100:98) (tPR = 3052) [OK] 
+    82s: Performing snapshot: (quiescence.....) (stop TxI) (stop BE) (saving... 103985 Kb) (term) (init) ...
+    94s:       rampup IR =      0 ... (rIR:aIR:PR = 0:0:0) (tPR = 0) [OK] 
+    97s:       rampup IR =     10 ... (rIR:aIR:PR = 10:11:11) (tPR = 229) [OK] 
+   100s:       rampup IR =     20 ... (rIR:aIR:PR = 20:21:21) (tPR = 355) [OK] 
+   103s:       rampup IR =     30 .... (rIR:aIR:PR = 30:29:29) (tPR = 689) [OK] 
+   107s:       rampup IR =     40 .... (rIR:aIR:PR = 40:41:41) (tPR = 985) [OK] 
+   111s:       rampup IR =     50 .... (rIR:aIR:PR = 50:53:52) (tPR = 1263) [OK] 
+   115s:       rampup IR =     60 .... (rIR:aIR:PR = 60:59:57) (tPR = 1389) [OK] 
+   119s:       rampup IR =     70 .... (rIR:aIR:PR = 70:69:67) (tPR = 1501) [OK] 
+   123s:       rampup IR =     80 .... (rIR:aIR:PR = 80:79:77) (tPR = 1761) [OK] 
+   127s:       rampup IR =     90 .... (rIR:aIR:PR = 90:88:86) (tPR = 1597) [OK] 
+   131s:       rampup IR =    100 .... (rIR:aIR:PR = 100:102:99) (tPR = 1878) [OK] 
+   135s:       trying IR =    200 .... (rIR:aIR:PR = 200:201:196) (tPR = 4126) [OK] 
+   139s:       trying IR =    220 .... (rIR:aIR:PR = 220:220:216) (tPR = 3718) [OK] 
+   143s:       trying IR =    244 .... (rIR:aIR:PR = 244:243:237) (tPR = 4504) [OK] 
+   147s:       trying IR =    273 .... (rIR:aIR:PR = 273:271:265) (tPR = 5371) [OK] 
+   151s:       trying IR =    307 .... (rIR:aIR:PR = 307:310:304) (tPR = 5953) [OK] 
+   155s:       trying IR =    349 .... (rIR:aIR:PR = 349:351:345) (tPR = 6129) [OK] 
+   159s:       trying IR =    399 .... (rIR:aIR:PR = 399:399:390) (tPR = 7219) [OK] 
+   163s:       trying IR =    458 ..... (rIR:aIR:PR = 458:463:454) (tPR = 8505) [OK] 
+   168s:       trying IR =    530 .... (rIR:aIR:PR = 530:521:509) (tPR = 9192) [OK] 
+   172s:       trying IR =    616 .... (rIR:aIR:PR = 616:624:611) (tPR = 11733) [OK] 
+   176s:       trying IR =    719 .... (rIR:aIR:PR = 719:732:714) (tPR = 11856) [OK] 
+   180s:       trying IR =    843 .... (rIR:aIR:PR = 843:842:826) (tPR = 14583) [OK] 
+   184s:       trying IR =    992 .... (rIR:aIR:PR = 992:988:967) (tPR = 16166) [OK] 
+   188s:       trying IR =   1170 .... (rIR:aIR:PR = 1170:1178:1154) (tPR = 20494) [OK] 
+   192s:       trying IR =   1384 .... (rIR:aIR:PR = 1384:1394:1378) (tPR = 23680) [OK] 
+   196s:       trying IR =   1641 .... (rIR:aIR:PR = 1641:1632:1630) (tPR = 27956) [OK] 
+   200s:       trying IR =   1949 .... (rIR:aIR:PR = 1949:1949:1949) (tPR = 32645) [OK] 
+   204s:       trying IR =   2319 .... (rIR:aIR:PR = 2319:2291:2291) (tPR = 37475) [OK] 
+   208s:       trying IR =   2762 .... (rIR:aIR:PR = 2762:2757:2757) (tPR = 43035) [OK] 
+   212s:       trying IR =   3295 .... (rIR:aIR:PR = 3295:3333:3333) (tPR = 51706) [OK] 
+   216s:       trying IR =   3934 .... (rIR:aIR:PR = 3934:3948:3948) (tPR = 60380) [OK] 
+   220s:       trying IR =   4701 .... (rIR:aIR:PR = 4701:4709:4709) (tPR = 70625) [OK] 
+   224s:       trying IR =   5621 .... (rIR:aIR:PR = 5621:5667:5666) (tPR = 85499) [OK] 
+   228s:       trying IR =   6725 ..... (rIR:aIR:PR = 6725:6699:6650) (tPR = 100528) [OK] 
+   233s:       trying IR =   8050 .... (rIR:aIR:PR = 8050:8187:8194) (tPR = 128564) [OK] 
+   237s:       trying IR =   9640 .......... (rIR:aIR:PR = 9640:9731:9710) (tPR = 148323) [OK] 
+   248s:       trying IR =  11548 ......................... (rIR:aIR:PR = 11548:11643:11154) (tPR = 166931) [OK] 
+   278s:       trying IR =  13837 ......................... (rIR:aIR:PR = 13837:13452:11271) (tPR = 162889) [PR is under limit] 
+   310s: Re-initializing (term) (init) ... OK
+   324s: Searching from base IR = 11548
+   324s:       rampup IR =      0 ... (rIR:aIR:PR = 0:0:0) (tPR = 0) [OK] 
+   327s:       rampup IR =   1155 .... (rIR:aIR:PR = 1155:1175:1149) (tPR = 22145) [OK] 
+   331s:       rampup IR =   2310 .... (rIR:aIR:PR = 2310:2310:2263) (tPR = 41357) [OK] 
+   335s:       rampup IR =   3464 .... (rIR:aIR:PR = 3464:3457:3385) (tPR = 61604) [OK] 
+   339s:       rampup IR =   4619 ..... (rIR:aIR:PR = 4619:4604:4575) (tPR = 78864) [OK] 
+   345s:       rampup IR =   5774 .... (rIR:aIR:PR = 5774:5763:5763) (tPR = 93247) [OK] 
+   349s:       rampup IR =   6929 .... (rIR:aIR:PR = 6929:7126:7102) (tPR = 107365) [OK] 
+   353s:       rampup IR =   8084 ...... (rIR:aIR:PR = 8084:8198:8198) (tPR = 123299) [OK] 
+   359s:       rampup IR =   9238 .... (rIR:aIR:PR = 9238:9246:9241) (tPR = 141731) [OK] 
+   363s:       rampup IR =  10393 ......... (rIR:aIR:PR = 10393:10334:10323) (tPR = 155746) [OK] 
+   373s:       rampup IR =  11548 .......................... (rIR:aIR:PR = 11548:10964:10907) (tPR = 162035) [IR is under limit] [PR is under limit] 
+   403s: Re-initializing (term) (init) ... OK
+   411s: high-bound for max-jOPS is measured to be 13837
+   411s: 
+   411s: Restarting (term) (init) ... OK
+   416s: 
+   416s: Warmup for building throughput-responsetime curve
+   416s: (10%)   IR =   1384 .................................................................................................................................................................................... (rIR:aIR:PR = 1384:1384:1383) (tPR = 21234) [OK] 
+   596s: 
+   596s: Building throughput-responsetime curve
+   596s: ( 0%)   IR =      0 ...|............................................................ (rIR:aIR:PR = 0:0:0) (tPR = 0) [OK] 
+   659s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+
+   659s: ( 1%)   IR =    138 ....|............................................................ (rIR:aIR:PR = 138:138:138) (tPR = 2033) [OK] 
+   723s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,       8296,          0,          0,       7874,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,       7874,          0,          0,          0,       7258,       8281,      300,      400,      600,      700,      800,    37000,
+     InStorePurchase,       4144,          0,          0,          0,       3857,       4349,      300,      400,      500,      700,      800,    37000,
+      OnlinePurchase,       2902,          0,          0,          0,       2698,       3061,      300,      500,      600,      600,      800,    37000,
+        InstPurchase,        828,          0,          0,          0,        703,        871,      400,      500,      600,      800,      900,    37000,
+          AssocOfCat,          9,          0,          0,          0,          8,          8,    22000,    23000,    30000,    30000,    30000,    30000,
+      AssocOfProduct,         84,          0,          0,          0,         81,         88,      400,      600,      700,      755,      800,      800,
+      BusinessReport,         23,          0,          0,          0,         22,         22,    21000,    27000,    38800,    51050,    53000,    53000,
+          CustBuyBeh,         85,          0,          0,          0,         77,         88,      200,      300,      310,      400,      600,      600,
+       ProductReturn,        221,          0,          0,          0,        168,        234,      200,      300,      400,      500,      600,      600,
+
+   723s: ( 2%)   IR =    277 .....|............................................................ (rIR:aIR:PR = 277:277:277) (tPR = 4165) [OK] 
+   788s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      16648,          0,          0,      15815,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      15815,          0,          0,          0,      14849,      16797,      300,      500,      800,      900,     1100,    75000,
+     InStorePurchase,       8325,          0,          0,          0,       7923,       8917,      300,      500,      800,      800,     1000,    75000,
+      OnlinePurchase,       5828,          0,          0,          0,       5419,       6082,      300,      500,      800,      900,     1100,     1600,
+        InstPurchase,       1662,          0,          0,          0,       1507,       1798,      400,      600,      800,      900,     1100,     1400,
+          AssocOfCat,         18,          0,          0,          0,         17,         18,    19200,    23000,    32100,    33000,    33000,    33000,
+      AssocOfProduct,        166,          0,          0,          0,        122,        153,      400,      700,      800,      900,     1100,     1100,
+      BusinessReport,         42,          0,          0,          0,         39,         44,    18600,    25000,    29000,    32500,    33000,    33000,
+          CustBuyBeh,        164,          0,          0,          0,        114,        163,      200,      400,      700,      780,     1100,     1100,
+       ProductReturn,        443,          0,          0,          0,        346,        446,      200,      300,      600,      600,      753,     1200,
+
+   788s: ( 3%)   IR =    415 ....|............................................................ (rIR:aIR:PR = 415:415:415) (tPR = 6212) [OK] 
+   852s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      24929,          0,          0,      23684,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      23684,          0,          0,          0,      22592,      24812,      300,      600,     1000,     1100,     1400,    81000,
+     InStorePurchase,      12461,          0,          0,          0,      11914,      12952,      300,      600,     1000,     1100,     1500,    66000,
+      OnlinePurchase,       8731,          0,          0,          0,       8367,       9189,      300,      600,     1000,     1100,     1400,    81000,
+        InstPurchase,       2492,          0,          0,          0,       2311,       2671,      400,      600,      900,     1000,     1300,    23000,
+          AssocOfCat,         27,          0,          0,          0,         26,         26,    17300,    23000,    27900,    31300,    32000,    32000,
+      AssocOfProduct,        249,          0,          0,          0,        180,        243,      500,      700,      900,     1000,     1580,     2400,
+      BusinessReport,         62,          0,          0,          0,         61,         65,    19400,    26000,    30000,    39800,    47000,    47000,
+          CustBuyBeh,        250,          0,          0,          0,        185,        244,      100,      500,      600,      775,     1055,     1200,
+       ProductReturn,        657,          0,          0,          0,        578,        736,      200,      600,      900,     1100,     1400,     1700,
+
+   852s: ( 4%)   IR =    553 ......|............................................................ (rIR:aIR:PR = 553:553:553) (tPR = 8212) [OK] 
+   918s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      33232,          0,          0,      31564,      59.45, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      31564,          0,          0,          0,      30385,      34475,      300,      800,     1100,     1300,     1700,   100000,
+     InStorePurchase,      16619,          0,          0,          0,      16130,      18309,      300,      700,     1000,     1200,     1500,   100000,
+      OnlinePurchase,      11628,          0,          0,          0,      11152,      12568,      300,      800,     1200,     1300,     1800,   100000,
+        InstPurchase,       3317,          0,          0,          0,       3103,       3598,      400,      900,     1200,     1400,     1800,   100000,
+          AssocOfCat,         35,          0,          0,          0,         33,         36,    17300,    22000,    25000,    27150,    28000,    28000,
+      AssocOfProduct,        333,          0,          0,          0,        253,        354,      500,      800,     1100,     1100,     1590,     1900,
+      BusinessReport,         83,          0,          0,          0,         78,         90,    19200,    26000,    30000,    36450,   117000,   117000,
+          CustBuyBeh,        330,          0,          0,          0,        245,        343,      200,      800,     1160,     1200,     1556,     3400,
+       ProductReturn,        887,          0,          0,          0,        770,        960,      200,      600,     1000,     1100,     1500,     3300,
+
+   918s: ( 5%)   IR =    692 .....|............................................................ (rIR:aIR:PR = 692:693:693) (tPR = 10162) [OK] 
+   984s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      41870,          0,          0,      39781,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      39781,          0,          0,          0,      37974,      42289,      300,      900,     1400,     1500,     9600,    90000,
+     InStorePurchase,      20943,          0,          0,          0,      20135,      22270,      300,      900,     1300,     1500,     9600,    90000,
+      OnlinePurchase,      14650,          0,          0,          0,      13986,      15642,      300,      900,     1400,     1500,     9857,    60000,
+        InstPurchase,       4188,          0,          0,          0,       3853,       4377,      400,      900,     1300,     1500,    13100,    59000,
+          AssocOfCat,         42,          0,          0,          0,         39,         44,    17800,    23000,    32000,    40500,   109000,   109000,
+      AssocOfProduct,        417,          0,          0,          0,        337,        463,      500,      800,     1200,     1400,     1700,     1800,
+      BusinessReport,        105,          0,          0,          0,        103,        112,    19400,    26000,    31000,    39350,   114790,   117000,
+          CustBuyBeh,        418,          0,          0,          0,        337,        444,      200,      500,      800,     1000,     9500,    39000,
+       ProductReturn,       1107,          0,          0,          0,        962,       1181,      200,      900,     1300,     1500,    16700,    31000,
+
+   984s: ( 6%)   IR =    830 .......|............................................................ (rIR:aIR:PR = 830:830:830) (tPR = 12352) [OK] 
+  1051s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      49819,          0,          0,      47329,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      47329,          0,          0,          0,      45832,      52267,      300,     1000,     1500,     1700,     2500,    88000,
+     InStorePurchase,      24905,          0,          0,          0,      24252,      27574,      300,     1000,     1500,     1700,     2600,    88000,
+      OnlinePurchase,      17437,          0,          0,          0,      16908,      19225,      300,     1000,     1500,     1700,     2400,    88000,
+        InstPurchase,       4987,          0,          0,          0,       4672,       5468,      400,     1100,     1600,     1700,     2600,    87000,
+          AssocOfCat,         49,          0,          0,          0,         49,         54,    17500,    23000,    27500,    52500,   106000,   106000,
+      AssocOfProduct,        501,          0,          0,          0,        412,        558,      500,     1100,     1500,     1700,     3200,    61000,
+      BusinessReport,        124,          0,          0,          0,         85,        126,    18700,    27000,    32300,    37650,   103830,   123000,
+          CustBuyBeh,        497,          0,          0,          0,        404,        531,      200,     1000,     1400,     1600,     2776,     9000,
+       ProductReturn,       1319,          0,          0,          0,       1175,       1420,      200,      800,     1300,     1400,     2100,    64000,
+
+  1051s: ( 7%)   IR =    969 ....|............................................................ (rIR:aIR:PR = 969:969:969) (tPR = 14303) [OK] 
+  1115s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      58198,          0,          0,      55289,      59.49, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      55289,          0,          0,          0,      53424,      58002,      300,     1100,     1700,     1900,     2800,    94000,
+     InStorePurchase,      29100,          0,          0,          0,      28214,      30549,      300,     1100,     1600,     1800,     2700,    84000,
+      OnlinePurchase,      20377,          0,          0,          0,      19678,      21339,      300,     1200,     1700,     1900,     2900,    94000,
+        InstPurchase,       5812,          0,          0,          0,       5532,       6114,      400,     1300,     1700,     2000,     3185,    94000,
+          AssocOfCat,         58,          0,          0,          0,         56,         62,    18700,    23000,    27000,    35700,    56000,    56000,
+      AssocOfProduct,        581,          0,          0,          0,        479,        602,      500,     1400,     1800,     2000,     2700,     5900,
+      BusinessReport,        146,          0,          0,          0,        104,        147,    19000,    27000,    32000,    38200,    72920,    95000,
+          CustBuyBeh,        577,          0,          0,          0,        486,        616,      200,      800,     1400,     1600,     1983,    63000,
+       ProductReturn,       1547,          0,          0,          0,       1384,       1658,      300,     1100,     1700,     1900,     2800,    63000,
+
+  1115s: ( 8%)   IR =   1107 .....|............................................................ (rIR:aIR:PR = 1107:1107:1107) (tPR = 16285) [OK] 
+  1180s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      66458,          0,          0,      63142,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      63142,          0,          0,          0,      61497,      67640,      300,     1200,     1900,     2100,     3900,    95000,
+     InStorePurchase,      33266,          0,          0,          0,      32522,      35646,      300,     1300,     1900,     2100,     3800,    95000,
+      OnlinePurchase,      23234,          0,          0,          0,      22628,      24844,      300,     1200,     1800,     2100,     3800,    95000,
+        InstPurchase,       6642,          0,          0,          0,       6347,       7150,      400,     1300,     1900,     2100,     4449,    95000,
+          AssocOfCat,         66,          0,          0,          0,         66,         70,    18500,    23000,    29800,    52850,   104000,   104000,
+      AssocOfProduct,        659,          0,          0,          0,        568,        742,      500,     1600,     2000,     2200,     6242,    62000,
+      BusinessReport,        164,          0,          0,          0,        120,        181,    19000,    28000,    48400,    63900,   105260,   111000,
+          CustBuyBeh,        663,          0,          0,          0,        547,        691,      300,     1300,     1800,     2000,     4808,    60000,
+       ProductReturn,       1764,          0,          0,          0,       1564,       1770,      200,      700,     1600,     1800,     2600,    83000,
+
+  1180s: ( 9%)   IR =   1245 .......|............................................................ (rIR:aIR:PR = 1245:1245:1245) (tPR = 18519) [OK] 
+  1248s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      75478,          0,          0,      71707,      59.49, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      71707,          0,          0,          0,      69761,      79095,      300,     1300,     2000,     2300,     8700,    96000,
+     InStorePurchase,      37739,          0,          0,          0,      36899,      41739,      300,     1300,     2000,     2300,     7700,    96000,
+      OnlinePurchase,      26429,          0,          0,          0,      25656,      29026,      300,     1400,     2000,     2300,     9000,    96000,
+        InstPurchase,       7539,          0,          0,          0,       7206,       8330,      400,     1500,     2100,     2400,    24000,    95000,
+          AssocOfCat,         74,          0,          0,          0,         71,         83,    19300,    24000,    30600,    36600,    85000,    85000,
+      AssocOfProduct,        749,          0,          0,          0,        661,        862,      600,     1800,     2400,     3000,    41000,    86000,
+      BusinessReport,        187,          0,          0,          0,        134,        193,    19100,    27000,    32600,    38000,   111060,   112000,
+          CustBuyBeh,        756,          0,          0,          0,        662,        843,      200,      900,     1700,     2000,     6268,    63000,
+       ProductReturn,       2005,          0,          0,          0,       1800,       2160,      200,     1200,     1900,     2200,    20390,    69000,
+
+  1248s: (10%)   IR =   1384 ....|............................................................ (rIR:aIR:PR = 1384:1384:1384) (tPR = 20596) [OK] 
+  1312s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      83104,          0,          0,      78951,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      78951,          0,          0,          0,      76738,      82960,      300,     1500,     2200,     2500,     4700,    95000,
+     InStorePurchase,      41546,          0,          0,          0,      40600,      43871,      300,     1400,     2100,     2500,     4300,    95000,
+      OnlinePurchase,      29092,          0,          0,          0,      28210,      30383,      300,     1500,     2200,     2600,     4800,    95000,
+        InstPurchase,       8313,          0,          0,          0,       7928,       8706,      400,     1500,     2200,     2600,     5100,    95000,
+          AssocOfCat,         83,          0,          0,          0,         82,         87,    17300,    24000,    32000,    35200,    45000,    45000,
+      AssocOfProduct,        836,          0,          0,          0,        707,        848,      400,     1000,     1600,     1800,     2251,    54000,
+      BusinessReport,        205,          0,          0,          0,        160,        231,    19600,    29000,    35800,    43400,    98080,   117000,
+          CustBuyBeh,        832,          0,          0,          0,        712,        869,      200,     1100,     1900,     2200,     5820,    89000,
+       ProductReturn,       2197,          0,          0,          0,       2048,       2378,      200,     1300,     2000,     2300,     3600,    88000,
+
+  1312s: (11%)   IR =   1522 ....|............................................................ (rIR:aIR:PR = 1522:1522:1522) (tPR = 22468) [OK] 
+  1376s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      91382,          0,          0,      86821,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      86821,          0,          0,          0,      84379,      91348,      300,     1500,     2300,     2600,     4500,    98000,
+     InStorePurchase,      45718,          0,          0,          0,      44584,      47992,      300,     1500,     2300,     2600,     4500,    97000,
+      OnlinePurchase,      31964,          0,          0,          0,      31126,      33780,      300,     1500,     2300,     2600,     4400,    98000,
+        InstPurchase,       9139,          0,          0,          0,       8669,       9576,      400,     1600,     2400,     2700,     5300,    97000,
+          AssocOfCat,         92,          0,          0,          0,         89,         97,    17700,    24000,    30200,    37100,    71000,    71000,
+      AssocOfProduct,        914,          0,          0,          0,        747,        911,      600,     1900,     2700,     3200,     5900,    13100,
+      BusinessReport,        225,          0,          0,          0,        152,        219,    19300,    27000,    43000,    47000,    63400,    98000,
+          CustBuyBeh,        913,          0,          0,          0,        788,        938,      100,     1000,     2000,     2300,     5061,    59000,
+       ProductReturn,       2417,          0,          0,          0,       2201,       2544,      400,     1600,     2300,     2775,     5610,    89000,
+
+  1376s: (12%)   IR =   1660 .......|............................................................ (rIR:aIR:PR = 1660:1660:1660) (tPR = 24476) [OK] 
+  1443s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,      99751,          0,          0,      94760,      59.49, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,      94760,          0,          0,          0,      92116,     104035,      300,     1600,     2500,     2900,     5000,    90000,
+     InStorePurchase,      49861,          0,          0,          0,      48763,      55008,      300,     1600,     2500,     2900,     4900,    89000,
+      OnlinePurchase,      34925,          0,          0,          0,      33736,      37999,      300,     1600,     2500,     2900,     5100,    90000,
+        InstPurchase,       9974,          0,          0,          0,       9617,      11028,      400,     1600,     2500,     2900,     4900,    89000,
+          AssocOfCat,        100,          0,          0,          0,         97,        110,    17600,    25000,    33900,    36000,    52670,    53000,
+      AssocOfProduct,        996,          0,          0,          0,        861,       1070,      600,     2250,     3100,     3600,     5258,    88000,
+      BusinessReport,        253,          0,          0,          0,        195,        271,    19400,    28000,    37000,    45800,   100000,   120000,
+          CustBuyBeh,        993,          0,          0,          0,        871,       1085,      100,     1100,     2200,     2700,     4500,    11600,
+       ProductReturn,       2649,          0,          0,          0,       2440,       2939,      200,     1600,     2400,     2900,     4300,    61000,
+
+  1443s: (13%)   IR =   1799 .....|............................................................ (rIR:aIR:PR = 1799:1798:1798) (tPR = 26500) [OK] 
+  1508s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     107972,          0,          0,     102585,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     102581,          0,          0,          0,      99730,     109295,      300,     1700,     2700,     3200,     6800,    96000,
+     InStorePurchase,      53969,          0,          0,          0,      52750,      57660,      300,     1600,     2600,     3100,     6500,    96000,
+      OnlinePurchase,      37809,          0,          0,          0,      36660,      40122,      300,     1800,     2800,     3400,     7300,    96000,
+        InstPurchase,      10803,          0,          0,          0,      10320,      11513,      400,     1700,     2700,     3300,     6400,    96000,
+          AssocOfCat,        109,          0,          0,          0,        106,        116,    18400,    25000,    34300,    40000,   114960,   117000,
+      AssocOfProduct,       1074,          0,          0,          0,        942,       1153,      900,     2200,     3100,     3600,     6600,    65000,
+      BusinessReport,        268,          0,          0,          0,        204,        283,    19200,    28000,    41000,    52600,   104160,   123000,
+          CustBuyBeh,       1082,          0,          0,          0,        909,       1127,      800,     2100,     3000,     3900,     9600,    92000,
+       ProductReturn,       2859,          0,          0,          0,       2657,       3082,      200,     1400,     2400,     2800,     5934,    63000,
+
+  1508s: (14%)   IR =   1937 ......|............................................................ (rIR:aIR:PR = 1937:1937:1937) (tPR = 28790) [OK] 
+  1574s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     117222,          0,          0,     111359,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     111354,          0,          0,          0,     107078,     120074,      300,     1800,     2900,     3600,     9900,    99000,
+     InStorePurchase,      58600,          0,          0,          0,      56612,      63242,      300,     1900,     3000,     3600,     7900,    99000,
+      OnlinePurchase,      41024,          0,          0,          0,      39249,      44011,      300,     1600,     2800,     3500,    27000,    98000,
+        InstPurchase,      11730,          0,          0,          0,      11217,      12821,      400,     1800,     2900,     3600,     7200,    98000,
+          AssocOfCat,        118,          0,          0,          0,        103,        128,    18600,    25000,    36000,    40100,   106650,   111000,
+      AssocOfProduct,       1170,          0,          0,          0,       1034,       1296,      600,     1900,     2700,     3015,     7903,    85000,
+      BusinessReport,        295,          0,          0,          0,        230,        321,    19600,    29000,    40000,    49900,    98560,   125000,
+          CustBuyBeh,       1176,          0,          0,          0,       1038,       1323,      200,     1500,     2800,     3400,     7928,    71000,
+       ProductReturn,       3104,          0,          0,          0,       2822,       3349,      500,     1700,     2700,     3300,     7800,    89000,
+
+  1574s: (15%)   IR =   2076 ......|............................................................ (rIR:aIR:PR = 2076:2074:2074) (tPR = 30720) [OK] 
+  1641s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     124539,          0,          0,     118322,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     118322,          0,          0,          0,     115572,     128830,      300,     1900,     3100,     3800,     9300,    97000,
+     InStorePurchase,      62241,          0,          0,          0,      61110,      67840,      300,     1900,     3100,     3800,     9400,    95000,
+      OnlinePurchase,      43627,          0,          0,          0,      42442,      47284,      300,     2000,     3100,     3900,     9500,    97000,
+        InstPurchase,      12454,          0,          0,          0,      12020,      13706,      400,     1800,     3000,     3700,     8500,    95000,
+          AssocOfCat,        125,          0,          0,          0,         88,        137,    18700,    26000,    40800,    58200,   108480,   110000,
+      AssocOfProduct,       1245,          0,          0,          0,       1121,       1401,      500,     2000,     2900,     3600,     7890,    65000,
+      BusinessReport,        312,          0,          0,          0,        234,        320,    19900,    30000,    39000,    46950,    71160,   121000,
+          CustBuyBeh,       1238,          0,          0,          0,       1070,       1295,      300,     2100,     3300,     4300,    25120,    95000,
+       ProductReturn,       3297,          0,          0,          0,       3121,       3706,      200,     1500,     2700,     3400,     8200,    93000,
+
+  1641s: (16%)   IR =   2214 ...........|............................................................ (rIR:aIR:PR = 2214:2214:2214) (tPR = 33125) [OK] 
+  1712s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     133170,          0,          0,     126499,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     126499,          0,          0,          0,     123443,     147589,      300,     2000,     3300,     4100,    10000,   100000,
+     InStorePurchase,      66544,          0,          0,          0,      65168,      77613,      300,     1900,     3200,     4000,     9800,    93000,
+      OnlinePurchase,      46645,          0,          0,          0,      45423,      54354,      300,     2000,     3300,     4100,    10000,   100000,
+        InstPurchase,      13310,          0,          0,          0,      12852,      15622,      400,     2300,     3500,     4400,    11177,    94000,
+          AssocOfCat,        134,          0,          0,          0,         95,        146,    18700,    26000,    47600,    70950,   125530,   126000,
+      AssocOfProduct,       1337,          0,          0,          0,       1166,       1476,      500,     2000,     3400,     4100,     8744,    87000,
+      BusinessReport,        331,          0,          0,          0,        273,        407,    20000,    30000,    45200,    55000,    95440,   141000,
+          CustBuyBeh,       1335,          0,          0,          0,       1157,       1533,      200,     2500,     3900,     5030,    15262,    67000,
+       ProductReturn,       3534,          0,          0,          0,       3311,       4207,      200,     2300,     3600,     4600,    12800,    91000,
+
+  1712s: (17%)   IR =   2352 .......|............................................................ (rIR:aIR:PR = 2352:2350:2350) (tPR = 35198) [OK] 
+  1779s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     141177,          0,          0,     134114,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     134114,          0,          0,          0,     130424,     147078,      200,     2100,     3500,     4300,    11100,    92000,
+     InStorePurchase,      70621,          0,          0,          0,      68591,      76834,      300,     2300,     3600,     4500,    12000,    92000,
+      OnlinePurchase,      49381,          0,          0,          0,      48152,      54441,      200,     1900,     3300,     4100,    10100,    92000,
+        InstPurchase,      14112,          0,          0,          0,      13681,      15803,      400,     2100,     3500,     4400,    11200,    92000,
+          AssocOfCat,        142,          0,          0,          0,        107,        168,    19000,    26000,    39000,    55100,   109000,   109000,
+      AssocOfProduct,       1409,          0,          0,          0,       1234,       1542,      500,     2600,     3900,     4600,    10756,    75000,
+      BusinessReport,        355,          0,          0,          0,        289,        398,    19500,    31000,    42000,    49050,   130010,   145000,
+          CustBuyBeh,       1409,          0,          0,          0,       1222,       1484,      100,     2400,     3800,     4875,    11960,    91000,
+       ProductReturn,       3748,          0,          0,          0,       3448,       4098,      300,     2500,     3800,     4800,    10805,    90000,
+
+  1779s: (18%)   IR =   2491 ....|............................................................ (rIR:aIR:PR = 2491:2490:2490) (tPR = 37165) [OK] 
+  1843s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     149492,          0,          0,     142018,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     142018,          0,          0,          0,     138666,     149055,      300,     2300,     3800,     4800,    12800,    98000,
+     InStorePurchase,      74725,          0,          0,          0,      73110,      78397,      300,     2100,     3700,     4700,    12500,    98000,
+      OnlinePurchase,      52332,          0,          0,          0,      51202,      55113,      300,     2400,     3900,     5000,    13500,    98000,
+        InstPurchase,      14961,          0,          0,          0,      14354,      15545,      400,     2300,     3800,     4800,    11300,    95000,
+          AssocOfCat,        148,          0,          0,          0,        112,        155,    19000,    27000,    44800,    54000,    69880,    71000,
+      AssocOfProduct,       1502,          0,          0,          0,       1324,       1530,      300,     2400,     3800,     4545,    13266,    94000,
+      BusinessReport,        376,          0,          0,          0,        314,        397,    19400,    31000,    47200,    59000,    94400,   130000,
+          CustBuyBeh,       1493,          0,          0,          0,       1332,       1556,      200,     2100,     3600,     4600,     9486,    94000,
+       ProductReturn,       3954,          0,          0,          0,       3659,       4182,      300,     2400,     3800,     4800,    15700,    94000,
+
+  1843s: (19%)   IR =   2629 .....|............................................................ (rIR:aIR:PR = 2629:2629:2629) (tPR = 38966) [OK] 
+  1908s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     157972,          0,          0,     150075,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     150078,          0,          0,          0,     146543,     160714,      300,     2400,     4100,     5500,    41000,   128000,
+     InStorePurchase,      79053,          0,          0,          0,      77472,      84678,      300,     2300,     4000,     5400,    38000,   128000,
+      OnlinePurchase,      55233,          0,          0,          0,      53817,      59011,      300,     2500,     4200,     5600,    46000,   128000,
+        InstPurchase,      15792,          0,          0,          0,      15254,      17025,      400,     2300,     3900,     5200,    31000,   128000,
+          AssocOfCat,        157,          0,          0,          0,        110,        166,    21000,    28000,    42000,    51000,   127650,   131000,
+      AssocOfProduct,       1585,          0,          0,          0,       1441,       1685,      500,     1500,     3200,     3970,    18942,    85000,
+      BusinessReport,        395,          0,          0,          0,        330,        458,    19500,    31000,    45100,    56050,   123000,   145000,
+          CustBuyBeh,       1578,          0,          0,          0,       1436,       1685,      200,      900,     3000,     3900,    62000,    78000,
+       ProductReturn,       4182,          0,          0,          0,       3906,       4480,      200,     2600,     4200,     5795,    58000,    99000,
+
+  1908s: (20%)   IR =   2767 .....|............................................................ (rIR:aIR:PR = 2767:2765:2765) (tPR = 41004) [OK] 
+  1973s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     166176,          0,          0,     157852,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     157852,          0,          0,          0,     154227,     168264,      300,     2500,     4200,     5500,    14000,   168000,
+     InStorePurchase,      83029,          0,          0,          0,      81175,      88521,      300,     2400,     4200,     5500,    14100,   166000,
+      OnlinePurchase,      58177,          0,          0,          0,      56848,      61909,      300,     2400,     4200,     5500,    13490,   106000,
+        InstPurchase,      16646,          0,          0,          0,      16204,      17834,      400,     2700,     4500,     5800,    14900,   168000,
+          AssocOfCat,        165,          0,          0,          0,        125,        195,    19400,    28000,    50400,    73200,   113000,   113000,
+      AssocOfProduct,       1664,          0,          0,          0,       1506,       1756,      500,     2500,     4000,     4915,     8800,    64000,
+      BusinessReport,        415,          0,          0,          0,        326,        437,    19300,    32000,    51000,    67000,    99860,   118000,
+          CustBuyBeh,       1660,          0,          0,          0,       1544,       1826,      100,     1800,     3800,     4765,    12857,    77000,
+       ProductReturn,       4420,          0,          0,          0,       4071,       4584,      200,     2200,     3900,     5075,    14045,   102000,
+
+  1973s: (21%)   IR =   2906 ......|............................................................ (rIR:aIR:PR = 2906:2906:2906) (tPR = 43054) [OK] 
+  2040s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     174699,          0,          0,     165965,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     165965,          0,          0,          0,     162021,     179495,      300,     2600,     4500,     6100,    15400,   121000,
+     InStorePurchase,      87350,          0,          0,          0,      85353,      94396,      300,     2600,     4530,     6100,    15500,   121000,
+      OnlinePurchase,      61143,          0,          0,          0,      59845,      66152,      300,     2600,     4600,     6200,    15500,   102000,
+        InstPurchase,      17472,          0,          0,          0,      16823,      18947,      400,     2200,     4200,     5500,    13552,    91000,
+          AssocOfCat,        175,          0,          0,          0,        135,        204,    18100,    26000,    44000,    55500,    98500,   101000,
+      AssocOfProduct,       1748,          0,          0,          0,       1577,       1898,      400,     3100,     4900,     6500,    21010,    89000,
+      BusinessReport,        434,          0,          0,          0,        353,        480,    19400,    30500,    51000,    65000,   104190,   137000,
+          CustBuyBeh,       1750,          0,          0,          0,       1567,       1888,      200,     1200,     2500,     3500,     9700,    29000,
+       ProductReturn,       4627,          0,          0,          0,       4279,       4970,      300,     2200,     4400,     5700,    15000,    91000,
+
+  2040s: (22%)   IR =   3044 .....|............................................................ (rIR:aIR:PR = 3044:3044:3044) (tPR = 45281) [OK] 
+  2105s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     182862,          0,          0,     173728,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     173729,          0,          0,          0,     169075,     184352,      300,     2600,     4300,     5700,    15600,   140000,
+     InStorePurchase,      91444,          0,          0,          0,      89248,      97118,      300,     2500,     4300,     5600,    15500,   111000,
+      OnlinePurchase,      64006,          0,          0,          0,      62349,      67972,      300,     2700,     4400,     5800,    16200,   140000,
+        InstPurchase,      18279,          0,          0,          0,      17478,      19262,      400,     2500,     4100,     5300,    15137,   113000,
+          AssocOfCat,        185,          0,          0,          0,        125,        167,    18800,    27000,    39200,    48800,    97960,   100000,
+      AssocOfProduct,       1817,          0,          0,          0,       1674,       2022,      300,     1700,     3800,     4700,    11277,    89000,
+      BusinessReport,        459,          0,          0,          0,        373,        487,    21000,    32000,    42200,    52000,   103600,   145000,
+          CustBuyBeh,       1829,          0,          0,          0,       1677,       1979,      100,     3100,     4600,     6500,    18100,    94000,
+       ProductReturn,       4842,          0,          0,          0,       4555,       5268,      400,     2600,     4400,     6000,    17031,    86000,
+
+  2105s: (23%)   IR =   3183 .......|............................................................ (rIR:aIR:PR = 3183:3181:3181) (tPR = 47706) [OK] 
+  2172s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     191877,          0,          0,     182295,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     182298,          0,          0,          0,     177259,     201050,      300,     2700,     4700,     6200,    17200,   132000,
+     InStorePurchase,      95922,          0,          0,          0,      93478,     105664,      300,     2700,     4700,     6500,    16700,   122000,
+      OnlinePurchase,      67195,          0,          0,          0,      65348,      74149,      300,     2800,     4900,     6100,    18700,   109000,
+        InstPurchase,      19181,          0,          0,          0,      18433,      21237,      400,     2600,     4500,     5500,    15262,   132000,
+          AssocOfCat,        192,          0,          0,          0,        143,        220,    18300,    29000,    43800,    51950,   141160,   680000,
+      AssocOfProduct,       1924,          0,          0,          0,       1756,       2174,      700,     3300,     5500,     9100,    28000,   122000,
+      BusinessReport,        481,          0,          0,          0,        383,        524,    20000,    32000,    45000,    52750,   112750,   176000,
+          CustBuyBeh,       1911,          0,          0,          0,       1765,       2157,      300,     2600,     4700,     6200,    22000,    93000,
+       ProductReturn,       5074,          0,          0,          0,       4760,       5681,      200,     1100,     3600,     4700,    11800,   105000,
+
+  2172s: (24%)   IR =   3321 ....|............................................................ (rIR:aIR:PR = 3321:3322:3322) (tPR = 49213) [OK] 
+  2236s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     199432,          0,          0,     189457,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     189454,          0,          0,          0,     185484,     198515,      300,     2800,     4700,     5900,    18700,   187000,
+     InStorePurchase,      99710,          0,          0,          0,      97899,     104492,      300,     2700,     4600,     5800,    18200,   187000,
+      OnlinePurchase,      69802,          0,          0,          0,      68275,      73116,      300,     3000,     4700,     6200,    21000,   186000,
+        InstPurchase,      19942,          0,          0,          0,      19310,      20907,      400,     2600,     4600,     5700,    17800,   147000,
+          AssocOfCat,        201,          0,          0,          0,        138,        190,    19700,    28000,    35900,    42450,   105990,   116000,
+      AssocOfProduct,       1996,          0,          0,          0,       1817,       2123,      500,     3100,     4560,     5600,    16300,   105000,
+      BusinessReport,        496,          0,          0,          0,        427,        544,    21000,    32000,    47000,    54000,   119850,   150000,
+          CustBuyBeh,       1986,          0,          0,          0,       1815,       2116,      300,     2800,     4700,     6200,    19398,    98000,
+       ProductReturn,       5297,          0,          0,          0,       4894,       5455,      200,     2600,     4600,     5800,    17744,    99000,
+
+  2236s: (25%)   IR =   3459 .....|............................................................ (rIR:aIR:PR = 3459:3459:3459) (tPR = 51175) [OK] 
+  2301s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     207713,          0,          0,     197308,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     197312,          0,          0,          0,     193408,     209712,      300,     2900,     5000,     6700,    29000,   136000,
+     InStorePurchase,     103873,          0,          0,          0,     102052,     110553,      300,     3000,     5000,     6800,    29000,   136000,
+      OnlinePurchase,      72673,          0,          0,          0,      71238,      77104,      300,     2800,     5000,     6700,    29000,   134000,
+        InstPurchase,      20766,          0,          0,          0,      20118,      22055,      400,     2700,     4800,     6400,    27000,   134000,
+          AssocOfCat,        209,          0,          0,          0,        146,        199,    19400,    29000,    42000,    62000,   138000,   140000,
+      AssocOfProduct,       2080,          0,          0,          0,       1921,       2279,      500,     3100,     5200,     6600,    18720,   126000,
+      BusinessReport,        515,          0,          0,          0,        437,        572,    22000,    33000,    49700,    63350,   126540,   146000,
+          CustBuyBeh,       2084,          0,          0,          0,       1931,       2289,      200,     2700,     4800,     6400,    29300,    98000,
+       ProductReturn,       5515,          0,          0,          0,       5183,       5771,      200,     2700,     5000,     7000,    27280,   126000,
+
+  2301s: (26%)   IR =   3598 .......|............................................................ (rIR:aIR:PR = 3598:3597:3597) (tPR = 53011) [OK] 
+  2368s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     216414,          0,          0,     205593,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     205585,          0,          0,          0,     201237,     226370,      300,     3100,     5300,     7600,    36000,   215000,
+     InStorePurchase,     108233,          0,          0,          0,     106186,     119087,      300,     3200,     5400,     7800,    36000,   215000,
+      OnlinePurchase,      75708,          0,          0,          0,      74038,      83285,      300,     3100,     5400,     7700,    40140,   215000,
+        InstPurchase,      21644,          0,          0,          0,      21013,      23998,      300,     2500,     4800,     6800,    28000,   189000,
+          AssocOfCat,        215,          0,          0,          0,        151,        221,    19600,    31000,    53600,    93700,   146780,   161000,
+      AssocOfProduct,       2161,          0,          0,          0,       1953,       2303,      500,     2200,     4000,     6680,    48960,   116000,
+      BusinessReport,        541,          0,          0,          0,        427,        567,    21000,    34000,    51200,    64600,   120640,   147000,
+          CustBuyBeh,       2164,          0,          0,          0,       1995,       2435,      200,     1600,     3500,     4900,    15200,    99000,
+       ProductReturn,       5740,          0,          0,          0,       5389,       6246,      200,     3500,     5700,     8700,    47000,   143000,
+
+  2368s: (27%)   IR =   3736 ....|............................................................ (rIR:aIR:PR = 3736:3734:3734) (tPR = 55170) [OK] 
+  2433s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     224316,          0,          0,     213102,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     213102,          0,          0,          0,     208746,     223085,      300,     3100,     5400,     7400,    23000,   140000,
+     InStorePurchase,     112177,          0,          0,          0,     110127,     117298,      300,     3000,     5300,     7300,    22000,   140000,
+      OnlinePurchase,      78510,          0,          0,          0,      76883,      82277,      300,     3100,     5400,     7400,    23000,   129000,
+        InstPurchase,      22415,          0,          0,          0,      21736,      23510,      400,     3400,     5600,     8100,    23000,   140000,
+          AssocOfCat,        223,          0,          0,          0,        165,        253,    19500,    30000,    40000,    53200,   119140,   129000,
+      AssocOfProduct,       2241,          0,          0,          0,       2036,       2349,      900,     4500,     7200,    12100,    31500,   103000,
+      BusinessReport,        565,          0,          0,          0,        470,        581,    25000,    36000,    50000,    61000,   127080,   151000,
+          CustBuyBeh,       2241,          0,          0,          0,       2047,       2333,      200,     2600,     4560,     5900,    16464,    94000,
+       ProductReturn,       5944,          0,          0,          0,       5666,       6295,      300,     2400,     5000,     6400,    22000,    95000,
+
+  2433s: (28%)   IR =   3874 .....|............................................................ (rIR:aIR:PR = 3874:3873:3873) (tPR = 57561) [OK] 
+  2498s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     234272,          0,          0,     222538,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     222549,          0,          0,          0,     217491,     237468,      300,     3200,     6100,    13300,    90000,   200000,
+     InStorePurchase,     117150,          0,          0,          0,     114728,     125018,      300,     3300,     6200,    14000,    91000,   200000,
+      OnlinePurchase,      81988,          0,          0,          0,      80245,      87531,      300,     3100,     6100,    13000,    89000,   173000,
+        InstPurchase,      23411,          0,          0,          0,      22518,      24919,      400,     2900,     5800,    11400,    83000,   200000,
+          AssocOfCat,        234,          0,          0,          0,        166,        239,    23000,    32000,    51000,    68000,   196600,   660000,
+      AssocOfProduct,       2340,          0,          0,          0,       2125,       2453,      500,     3400,     6400,    12030,    96000,   174000,
+      BusinessReport,        589,          0,          0,          0,        472,        573,    23000,    35000,    56600,    90800,   157080,   224000,
+          CustBuyBeh,       2344,          0,          0,          0,       2178,       2554,      200,     3300,     6300,    16675,    94000,   142000,
+       ProductReturn,       6218,          0,          0,          0,       5785,       6530,      200,     3100,     5900,    14045,   105000,   146000,
+
+  2498s: (29%)   IR =   4013 ........|............................................................ (rIR:aIR:PR = 4013:4008:4008) (tPR = 59375) [OK] 
+  2567s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     241595,          0,          0,     229497,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     229498,          0,          0,          0,     226022,     257228,      300,     3300,     5800,     8400,    29000,   141000,
+     InStorePurchase,     120822,          0,          0,          0,     119098,     135074,      300,     3000,     5600,     7900,    28000,   141000,
+      OnlinePurchase,      84502,          0,          0,          0,      83296,      94911,      300,     3600,     6100,     9140,    32000,   141000,
+        InstPurchase,      24174,          0,          0,          0,      23628,      27243,      400,     3300,     5700,     8300,    29000,   118000,
+          AssocOfCat,        243,          0,          0,          0,        191,        288,    19200,    32000,    47100,    57550,   127760,   168000,
+      AssocOfProduct,       2421,          0,          0,          0,       2203,       2641,      500,     4100,     6500,     9690,    34740,   102000,
+      BusinessReport,        602,          0,          0,          0,        520,        696,    22000,    35000,    50300,    62000,   123090,   146000,
+          CustBuyBeh,       2421,          0,          0,          0,       2224,       2678,      500,     2900,     5400,     8400,    30210,    96000,
+       ProductReturn,       6405,          0,          0,          0,       6044,       7154,      200,     3400,     6000,     9125,    32450,   102000,
+
+  2567s: (30%)   IR =   4151 ....|............................................................ (rIR:aIR:PR = 4151:4151:4151) (tPR = 62321) [OK] 
+  2631s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     249357,          0,          0,     236868,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     236868,          0,          0,          0,     232380,     248259,      300,     3400,     6000,     9000,    29000,   126000,
+     InStorePurchase,     124661,          0,          0,          0,     122511,     130540,      300,     3400,     6000,     9000,    30000,   126000,
+      OnlinePurchase,      87261,          0,          0,          0,      85549,      91460,      300,     3500,     6100,     9400,    30000,   126000,
+        InstPurchase,      24946,          0,          0,          0,      24320,      26259,      400,     2800,     5500,     8000,    27000,   111000,
+          AssocOfCat,        249,          0,          0,          0,        188,        241,    22000,    31000,    46000,    57900,    82860,    95000,
+      AssocOfProduct,       2500,          0,          0,          0,       2295,       2581,      500,     2800,     5500,     7790,    26000,   100000,
+      BusinessReport,        624,          0,          0,          0,        524,        671,    24000,    35000,    56000,    71000,   134280,   159000,
+          CustBuyBeh,       2500,          0,          0,          0,       2314,       2659,      300,     4000,     6600,     9900,    40800,   119000,
+       ProductReturn,       6615,          0,          0,          0,       6246,       6893,      200,     3700,     6400,    10400,    31060,   103000,
+
+  2631s: (31%)   IR =   4289 .....|............................................................ (rIR:aIR:PR = 4289:4289:4289) (tPR = 64048) [OK] 
+  2696s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     258325,          0,          0,     245420,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     245420,          0,          0,          0,     241369,     262837,      300,     3500,     6500,    10900,    36000,   206000,
+     InStorePurchase,     129193,          0,          0,          0,     127407,     138433,      300,     3600,     6600,    11300,    38000,   205000,
+      OnlinePurchase,      90423,          0,          0,          0,      88865,      96864,      300,     3300,     6300,    10100,    33000,   206000,
+        InstPurchase,      25804,          0,          0,          0,      25097,      27540,      400,     3900,     6800,    11300,    35000,   137000,
+          AssocOfCat,        260,          0,          0,          0,        190,        255,    21000,    33000,    55000,    67200,   122960,   138000,
+      AssocOfProduct,       2580,          0,          0,          0,       2391,       2809,      500,     3100,     6300,    10100,    28000,   100000,
+      BusinessReport,        648,          0,          0,          0,        546,        682,    24000,    36000,    54000,    73850,   132170,   172000,
+          CustBuyBeh,       2578,          0,          0,          0,       2394,       2867,      300,     3700,     6500,    10900,    33320,    98000,
+       ProductReturn,       6840,          0,          0,          0,       6615,       7561,      200,     4500,     7400,    13100,    44000,   148000,
+
+  2696s: (32%)   IR =   4428 .....|............................................................ (rIR:aIR:PR = 4428:4426:4431) (tPR = 65841) [OK] 
+  2762s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     268900,          0,          0,     255450,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     255123,          0,          0,          0,     250219,     272025,      300,     3700,     7200,    14300,    96000,   600000,
+     InStorePurchase,     134303,          0,          0,          0,     132014,     143226,      300,     3400,     7000,    13300,    92000,   600000,
+      OnlinePurchase,      93996,          0,          0,          0,      92207,     100195,      300,     3900,     7400,    15000,    99000,   600000,
+        InstPurchase,      26824,          0,          0,          0,      25998,      28604,      400,     4100,     7700,    15875,    99000,   600000,
+          AssocOfCat,        270,          0,          0,          0,        202,        258,    18400,    33000,    50000,    65050,   144820,   225000,
+      AssocOfProduct,       2691,          0,          0,          0,       2487,       2895,      500,     4400,     7800,    17700,   100080,   610000,
+      BusinessReport,        668,          0,          0,          0,        573,        729,    24000,    37000,    56000,    75000,   150200,   168000,
+          CustBuyBeh,       2683,          0,          0,          0,       2462,       2877,      200,     3000,     6000,    12700,   108440,   195000,
+       ProductReturn,       7128,          0,          0,          0,       6714,       7532,      200,     3500,     7300,    14635,   100000,   600000,
+
+  2762s: (33%)   IR =   4566 .....|............................................................ (rIR:aIR:PR = 4566:4565:4565) (tPR = 68249) [OK] 
+  2827s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     274971,          0,          0,     261233,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     261233,          0,          0,          0,     256445,     278450,      300,     3800,     7400,    12900,    41000,   218000,
+     InStorePurchase,     137514,          0,          0,          0,     135159,     146192,      300,     3500,     7100,    12300,    40000,   218000,
+      OnlinePurchase,      96259,          0,          0,          0,      94667,     103047,      300,     4000,     7600,    13200,    44000,   193000,
+        InstPurchase,      27460,          0,          0,          0,      26619,      29211,      400,     4400,     8100,    14900,    46000,   193000,
+          AssocOfCat,        271,          0,          0,          0,        207,        300,    23000,    32000,    42000,    53000,   124920,   156000,
+      AssocOfProduct,       2750,          0,          0,          0,       2553,       2986,     1000,     4800,     8100,    12465,    49000,   109000,
+      BusinessReport,        683,          0,          0,          0,        578,        697,    24000,    38000,    60000,    79100,   137020,   189000,
+          CustBuyBeh,       2752,          0,          0,          0,       2570,       3064,      200,     3800,     8400,    14500,    41000,   101000,
+       ProductReturn,       7282,          0,          0,          0,       6832,       7686,      200,     4600,     8300,    16200,    54000,   116000,
+
+  2827s: (34%)   IR =   4705 ......|............................................................ (rIR:aIR:PR = 4705:4704:4704) (tPR = 69766) [OK] 
+  2893s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     282803,          0,          0,     268655,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     268655,          0,          0,          0,     264047,     290945,      300,     3800,     7400,    12200,    39000,   145000,
+     InStorePurchase,     141365,          0,          0,          0,     139151,     152853,      300,     3600,     7100,    11600,    38000,   144000,
+      OnlinePurchase,      98990,          0,          0,          0,      97250,     107276,      300,     4200,     7700,    12900,    42000,   145000,
+        InstPurchase,      28300,          0,          0,          0,      27646,      30816,      400,     4000,     7500,    12800,    40000,   145000,
+          AssocOfCat,        284,          0,          0,          0,        206,        289,    21000,    32000,    49000,    58500,   115100,   137000,
+      AssocOfProduct,       2826,          0,          0,          0,       2595,       2971,      800,     4300,     7700,    14300,    39560,   101000,
+      BusinessReport,        707,          0,          0,          0,        583,        741,    26000,    38000,    58000,    78900,   138580,   154000,
+          CustBuyBeh,       2823,          0,          0,          0,       2574,       2993,      200,     3900,     7060,    10800,    41000,    98000,
+       ProductReturn,       7508,          0,          0,          0,       7197,       8236,      200,     3800,     7100,    11800,    35000,   105000,
+
+  2893s: (35%)   IR =   4843 ....|............................................................ (rIR:aIR:PR = 4843:4844:4844) (tPR = 71946) [OK] 
+  2957s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     291427,          0,          0,     276851,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     276850,          0,          0,          0,     272164,     290218,      300,     4100,     8400,    14705,    40000,   181000,
+     InStorePurchase,     145664,          0,          0,          0,     143687,     152894,      300,     4200,     8600,    15300,    41000,   181000,
+      OnlinePurchase,     102008,          0,          0,          0,     100365,     107068,      300,     4100,     8400,    14400,    40000,   129000,
+        InstPurchase,      29178,          0,          0,          0,      28112,      30256,      400,     3700,     7800,    13400,    35000,   129000,
+          AssocOfCat,        291,          0,          0,          0,        223,        307,    24000,    35000,    55000,    72600,   143200,   155000,
+      AssocOfProduct,       2922,          0,          0,          0,       2725,       3074,      400,     2000,     5700,     8300,    26000,   104000,
+      BusinessReport,        727,          0,          0,          0,        622,        771,    22000,    39000,    57800,    73000,   126400,   202000,
+          CustBuyBeh,       2914,          0,          0,          0,       2704,       3089,      200,     2600,     6000,    10000,    32000,    95000,
+       ProductReturn,       7727,          0,          0,          0,       7329,       8154,      300,     4400,     8900,    16900,    41000,   123000,
+
+  2957s: (36%)   IR =   4981 .....|............................................................ (rIR:aIR:PR = 4981:4982:4982) (tPR = 73944) [OK] 
+  3023s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     300975,          0,          0,     285908,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     285908,          0,          0,          0,     281019,     305164,      300,     4100,     8600,    16100,    46000,   220000,
+     InStorePurchase,     150424,          0,          0,          0,     148225,     160596,      300,     4100,     8600,    15900,    46000,   220000,
+      OnlinePurchase,     105391,          0,          0,          0,     103504,     112359,      300,     4200,     8700,    16400,    47000,   156000,
+        InstPurchase,      30093,          0,          0,          0,      29290,      32209,      400,     4200,     8500,    16100,    44000,   123000,
+          AssocOfCat,        302,          0,          0,          0,        234,        316,    19400,    35000,    57300,    73000,   138830,   145000,
+      AssocOfProduct,       3011,          0,          0,          0,       2772,       3180,      900,     5700,    10900,    21000,    56190,   136000,
+      BusinessReport,        757,          0,          0,          0,        655,        787,    24000,    39000,    64200,    79000,   145000,   178000,
+          CustBuyBeh,       3012,          0,          0,          0,       2762,       3221,      200,     2800,     7900,    13600,    40780,   100000,
+       ProductReturn,       7985,          0,          0,          0,       7584,       8554,      200,     4600,     9500,    18125,    50000,   105000,
+
+  3023s: (37%)   IR =   5120 ......|............................................................ (rIR:aIR:PR = 5120:5125:5125) (tPR = 76219) [OK] 
+  3090s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     312068,          0,          0,     296456,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     296456,          0,          0,          0,     290819,     320427,      300,     4300,    10300,    27000,   102000,   620000,
+     InStorePurchase,     156092,          0,          0,          0,     153360,     168599,      300,     4300,    10300,    27000,   102000,   620000,
+      OnlinePurchase,     109167,          0,          0,          0,     107189,     118184,      300,     4200,    10200,    26000,   100000,   610000,
+        InstPurchase,      31197,          0,          0,          0,      30270,      33644,      400,     4400,    10800,    28000,   110000,   610000,
+          AssocOfCat,        312,          0,          0,          0,        270,        377,    19800,    34000,    61200,    87000,   177440,   179000,
+      AssocOfProduct,       3117,          0,          0,          0,       2872,       3435,      600,     4900,    10340,    25000,   100280,   197000,
+      BusinessReport,        780,          0,          0,          0,        690,        867,    24000,    39000,    70200,    98800,   151320,   233000,
+          CustBuyBeh,       3122,          0,          0,          0,       2875,       3360,      300,     5500,    12400,    34000,   115390,   610000,
+       ProductReturn,       8282,          0,          0,          0,       7849,       8821,      200,     5000,    11700,    30000,   122780,   203000,
+
+  3090s: (38%)   IR =   5258 .....|............................................................ (rIR:aIR:PR = 5258:5259:5259) (tPR = 78065) [OK] 
+  3155s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     317505,          0,          0,     301660,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     301708,          0,          0,          0,     296120,     321900,      300,     4300,     8500,    16100,    65000,   215000,
+     InStorePurchase,     158801,          0,          0,          0,     155645,     168956,      300,     4300,     8500,    16100,    64000,   215000,
+      OnlinePurchase,     111141,          0,          0,          0,     109591,     119083,      300,     4300,     8600,    16100,    67000,   215000,
+        InstPurchase,      31766,          0,          0,          0,      30884,      33861,      400,     4000,     8400,    15890,    61000,   142000,
+          AssocOfCat,        315,          0,          0,          0,        247,        350,    21000,    34000,    52000,    68450,   164470,   187000,
+      AssocOfProduct,       3170,          0,          0,          0,       2935,       3400,      600,     4200,     8500,    17395,    63990,   176000,
+      BusinessReport,        797,          0,          0,          0,        682,        872,    26000,    38000,    60000,    74350,   161510,   193000,
+          CustBuyBeh,       3171,          0,          0,          0,       2969,       3416,      300,     3500,     6900,    14500,    55000,   124000,
+       ProductReturn,       8401,          0,          0,          0,       7999,       9023,      200,     4300,     8500,    14800,    59000,   149000,
+
+  3155s: (39%)   IR =   5396 .....|............................................................ (rIR:aIR:PR = 5396:5396:5396) (tPR = 80694) [OK] 
+  3220s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     325318,          0,          0,     309046,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     309033,          0,          0,          0,     303587,     329740,      300,     4400,     8800,    16900,    56000,   221000,
+     InStorePurchase,     162638,          0,          0,          0,     160150,     173833,      300,     4400,     8700,    16500,    55000,   221000,
+      OnlinePurchase,     113870,          0,          0,          0,     111809,     121172,      300,     4400,     8700,    16700,    55000,   202000,
+        InstPurchase,      32525,          0,          0,          0,      31628,      34735,      400,     4800,     9400,    18920,    62000,   190000,
+          AssocOfCat,        330,          0,          0,          0,        256,        341,    21000,    35000,    53800,    71000,   148600,   173000,
+      AssocOfProduct,       3260,          0,          0,          0,       3014,       3503,      600,     3100,     8500,    12900,    50960,   187000,
+      BusinessReport,        814,          0,          0,          0,        708,        864,    26000,    40000,    59000,    83750,   167000,   179000,
+          CustBuyBeh,       3243,          0,          0,          0,       3063,       3544,     1700,     5300,     9700,    23000,    61000,   127000,
+       ProductReturn,       8627,          0,          0,          0,       8336,       9358,      200,     4400,     9000,    18000,    57000,   138000,
+
+  3220s: (40%)   IR =   5535 ......|............................................................ (rIR:aIR:PR = 5535:5534:5534) (tPR = 81935) [OK] 
+  3287s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     334375,          0,          0,     317644,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     317644,          0,          0,          0,     311395,     344721,      300,     4600,    10400,    23000,    71000,   198000,
+     InStorePurchase,     167178,          0,          0,          0,     164323,     181740,      300,     4600,    10600,    23000,    71000,   192000,
+      OnlinePurchase,     117035,          0,          0,          0,     114573,     126781,      300,     4600,    10400,    22000,    71000,   198000,
+        InstPurchase,      33431,          0,          0,          0,      32499,      36200,      300,     4600,    10000,    22000,    70000,   171000,
+          AssocOfCat,        335,          0,          0,          0,        267,        369,    19700,    35000,    54000,    67000,   108700,   241000,
+      AssocOfProduct,       3345,          0,          0,          0,       3054,       3523,      900,     4700,    11060,    27000,    71760,   158000,
+      BusinessReport,        834,          0,          0,          0,        692,        885,    26000,    40000,    69000,    83700,   161560,   200000,
+          CustBuyBeh,       3338,          0,          0,          0,       3063,       3581,      200,     4700,     9700,    22000,    65000,   156000,
+       ProductReturn,       8879,          0,          0,          0,       8547,       9690,      200,     4900,    10800,    24000,    71000,   169000,
+
+  3287s: (41%)   IR =   5673 ....|............................................................ (rIR:aIR:PR = 5673:5672:5672) (tPR = 84089) [OK] 
+  3351s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     342577,          0,          0,     325440,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     325440,          0,          0,          0,     318527,     341792,      300,     4800,    12400,    36000,   246000,   396000,
+     InStorePurchase,     171249,          0,          0,          0,     167986,     180203,      300,     4900,    12700,    37000,   250000,   396000,
+      OnlinePurchase,     119961,          0,          0,          0,     117216,     125456,      300,     4700,    12300,    35000,   245000,   371000,
+        InstPurchase,      34230,          0,          0,          0,      33325,      36133,      400,     4300,    11300,    32000,   238000,   357000,
+          AssocOfCat,        342,          0,          0,          0,        261,        349,    23000,    37000,    58000,    73000,   138000,   161000,
+      AssocOfProduct,       3426,          0,          0,          0,       3091,       3478,      400,     5100,    12800,    28000,    92000,   281000,
+      BusinessReport,        852,          0,          0,          0,        734,        896,    26000,    41000,    68300,    92000,   273170,   452000,
+          CustBuyBeh,       3425,          0,          0,          0,       3178,       3622,      300,     3000,     8870,    24000,   195000,   264000,
+       ProductReturn,       9094,          0,          0,          0,       8618,       9578,      200,     4600,    11100,    33000,   237000,   363000,
+
+  3351s: (42%)   IR =   5812 ......|............................................................ (rIR:aIR:PR = 5812:5812:5812) (tPR = 86323) [OK] 
+  3418s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     350295,          0,          0,     332775,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     332778,          0,          0,          0,     327905,     361154,      300,     4900,    12400,    28000,    80000,   202000,
+     InStorePurchase,     175177,          0,          0,          0,     172967,     190289,      300,     4800,    12000,    28000,    78000,   202000,
+      OnlinePurchase,     122573,          0,          0,          0,     120781,     132836,      300,     5000,    12500,    28000,    80000,   190000,
+        InstPurchase,      35028,          0,          0,          0,      34157,      38029,      400,     5400,    13600,    30000,    87000,   190000,
+          AssocOfCat,        356,          0,          0,          0,        271,        378,    24000,    36000,    58000,    68050,   144630,   167000,
+      AssocOfProduct,       3495,          0,          0,          0,       3290,       3853,      500,     3700,     9800,    21000,    70000,   190000,
+      BusinessReport,        875,          0,          0,          0,        744,        933,    26000,    41000,    66600,    86300,   159000,   219000,
+          CustBuyBeh,       3497,          0,          0,          0,       3266,       3771,      200,     3100,     9600,    23000,    73000,   177000,
+       ProductReturn,       9295,          0,          0,          0,       8876,      10040,      200,     4800,    12300,    29000,    82000,   190000,
+
+  3418s: (43%)   IR =   5950 ........|............................................................ (rIR:aIR:PR = 5950:5949:5949) (tPR = 88275) [OK] 
+  3486s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     358055,          0,          0,     340156,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     340156,          0,          0,          0,     334251,     379787,      300,     5000,    13700,    28000,    68000,   194000,
+     InStorePurchase,     179050,          0,          0,          0,     176212,     199770,      300,     4900,    13700,    28000,    67000,   190000,
+      OnlinePurchase,     125322,          0,          0,          0,     123216,     140154,      300,     4900,    13500,    28000,    67000,   194000,
+        InstPurchase,      35784,          0,          0,          0,      34823,      39863,      400,     5300,    14460,    30000,    74360,   173000,
+          AssocOfCat,        360,          0,          0,          0,        294,        434,    26000,    37500,    76500,    93750,   151000,   170000,
+      AssocOfProduct,       3580,          0,          0,          0,       3373,       4028,     1600,     5450,    15700,    29000,    74840,   127000,
+      BusinessReport,        897,          0,          0,          0,        789,       1012,    26000,    43000,    77000,    96350,   154740,   205000,
+          CustBuyBeh,       3575,          0,          0,          0,       3346,       3977,      200,     6600,    19920,    38000,    76000,   133000,
+       ProductReturn,       9487,          0,          0,          0,       9044,      10632,      600,     4900,    15370,    28000,    70000,   151000,
+
+  3486s: (44%)   IR =   6088 ......|............................................................ (rIR:aIR:PR = 6088:6088:6087) (tPR = 90806) [OK] 
+  3552s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     367047,          0,          0,     348727,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     348731,          0,          0,          0,     343133,     377315,      300,     5200,    17000,    33000,    85000,   244000,
+     InStorePurchase,     183555,          0,          0,          0,     181245,     198751,      300,     5200,    16800,    33000,    86000,   244000,
+      OnlinePurchase,     128469,          0,          0,          0,     126164,     138871,      300,     5200,    17200,    33000,    83000,   244000,
+        InstPurchase,      36707,          0,          0,          0,      35724,      39693,      400,     5300,    17400,    32000,    85000,   244000,
+          AssocOfCat,        363,          0,          0,          0,        289,        400,    23000,    36000,    65000,    81950,   183690,   194000,
+      AssocOfProduct,       3667,          0,          0,          0,       3398,       4033,      600,     4100,    15400,    30000,    71000,   244000,
+      BusinessReport,        917,          0,          0,          0,        789,        963,    28000,    44000,    80200,   110400,   171720,   247000,
+          CustBuyBeh,       3673,          0,          0,          0,       3378,       3917,      300,     5100,    16600,    34000,    83820,   178000,
+       ProductReturn,       9732,          0,          0,          0,       9279,      10513,      200,     4300,    15460,    29000,    79000,   170000,
+
+  3552s: (45%)   IR =   6227 .......|............................................................ (rIR:aIR:PR = 6227:6232:6231) (tPR = 92464) [OK] 
+  3620s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     376375,          0,          0,     357589,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     357566,          0,          0,          0,     350405,     393664,      300,     5300,    19000,    40000,    87000,   187000,
+     InStorePurchase,     188162,          0,          0,          0,     184613,     207139,      300,     5500,    19100,    40000,    88000,   178000,
+      OnlinePurchase,     131794,          0,          0,          0,     129071,     144989,      300,     5100,    18800,    39000,    86000,   187000,
+        InstPurchase,      37610,          0,          0,          0,      36721,      41536,      400,     5500,    18800,    40000,    86000,   178000,
+          AssocOfCat,        379,          0,          0,          0,        302,        413,    25000,    38000,    73000,    99300,   164860,   209000,
+      AssocOfProduct,       3773,          0,          0,          0,       3497,       4074,      500,     5300,    17250,    38000,    82000,   133000,
+      BusinessReport,        939,          0,          0,          0,        830,       1071,    28000,    44000,    94000,   124400,   158280,   199000,
+          CustBuyBeh,       3757,          0,          0,          0,       3503,       4161,      300,     3400,    14880,    32000,    78380,   139000,
+       ProductReturn,       9981,          0,          0,          0,       9577,      11004,      200,     3400,    12950,    31000,    78950,   154000,
+
+  3620s: (46%)   IR =   6365 .........|............................................................ (rIR:aIR:PR = 6365:6369:6369) (tPR = 94932) [OK] 
+  3690s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     385599,          0,          0,     366296,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     366302,          0,          0,          0,     356545,     414756,      300,     5600,    28000,    57000,   118000,   287000,
+     InStorePurchase,     192763,          0,          0,          0,     187665,     217990,      300,     5600,    27000,    54000,   118000,   287000,
+      OnlinePurchase,     134981,          0,          0,          0,     131313,     153046,      300,     5800,    30000,    62000,   119000,   281000,
+        InstPurchase,      38558,          0,          0,          0,      37567,      43720,      400,     5100,    27000,    54000,   115000,   281000,
+          AssocOfCat,        387,          0,          0,          0,        321,        461,    21000,    38000,    91800,   147900,   178760,   281000,
+      AssocOfProduct,       3855,          0,          0,          0,       3574,       4365,      500,     4100,    22000,    48700,   107000,   200000,
+      BusinessReport,        966,          0,          0,          0,        823,       1079,    25000,    46000,   101000,   141000,   198400,   307000,
+          CustBuyBeh,       3865,          0,          0,          0,       3624,       4445,      300,     5100,    26000,    54000,   112000,   165000,
+       ProductReturn,      10224,          0,          0,          0,       9694,      11548,      200,     6000,    32000,    58000,   119510,   281000,
+
+  3690s: (47%)   IR =   6503 ......|............................................................ (rIR:aIR:PR = 6503:6508:6508) (tPR = 96174) [OK] 
+  3756s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     394879,          0,          0,     375158,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     375145,          0,          0,          0,     363691,     402206,      300,     5800,    27000,    54000,   117000,   249000,
+     InStorePurchase,     197403,          0,          0,          0,     190970,     211255,      300,     5800,    28000,    55000,   120000,   244000,
+      OnlinePurchase,     138261,          0,          0,          0,     134240,     148216,      300,     5400,    26000,    53000,   115000,   249000,
+        InstPurchase,      39481,          0,          0,          0,      38481,      42735,      400,     6300,    29000,    55000,   115000,   249000,
+          AssocOfCat,        393,          0,          0,          0,        326,        468,    22000,    37000,    69000,    90000,   187930,   239000,
+      AssocOfProduct,       3945,          0,          0,          0,       3630,       4209,      800,     6700,    29000,    59500,   128700,   192000,
+      BusinessReport,        984,          0,          0,          0,        853,       1079,    27000,    48000,    95000,   128000,   194200,   264000,
+          CustBuyBeh,       3943,          0,          0,          0,       3677,       4271,      200,     5500,    26000,    50000,   106000,   187000,
+       ProductReturn,      10455,          0,          0,          0,      10027,      11400,      200,     6400,    31000,    58000,   120000,   191000,
+
+  3756s: (48%)   IR =   6642 ....|............................................................ (rIR:aIR:PR = 6642:6653:6653) (tPR = 98747) [OK] 
+  3821s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     404699,          0,          0,     384495,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     384495,          0,          0,          0,     361585,     388007,      300,     5700,    28000,    51000,   114000,   336000,
+     InStorePurchase,     202475,          0,          0,          0,     190350,     204239,      300,     5700,    28000,    51000,   114000,   336000,
+      OnlinePurchase,     141511,          0,          0,          0,     133116,     142863,      300,     5800,    28000,    52000,   114360,   329000,
+        InstPurchase,      40509,          0,          0,          0,      38119,      40905,      300,     5400,    27000,    49000,   110000,   218000,
+          AssocOfCat,        404,          0,          0,          0,        324,        418,    27000,    39500,    76100,   110050,   165810,   186000,
+      AssocOfProduct,       4044,          0,          0,          0,       3744,       4246,      400,     7000,    32000,    57000,   119000,   218000,
+      BusinessReport,       1008,          0,          0,          0,        859,       1008,    29000,    49000,    91100,   128000,   188000,   469000,
+          CustBuyBeh,       4044,          0,          0,          0,       3732,       4199,      200,     6400,    35000,    54000,   112000,   218000,
+       ProductReturn,      10704,          0,          0,          0,      10232,      11266,      200,     4100,    21000,    44000,   108000,   218000,
+
+  3821s: (49%)   IR =   6780 .......|............................................................ (rIR:aIR:PR = 6780:6785:6785) (tPR = 101076) [OK] 
+  3889s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     411531,          0,          0,     390971,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     390971,          0,          0,          0,     363316,     407784,      300,     5800,    31000,    63000,   115000,   314000,
+     InStorePurchase,     205731,          0,          0,          0,     190159,     213087,      300,     5600,    31000,    63000,   115000,   314000,
+      OnlinePurchase,     144099,          0,          0,          0,     134416,     150788,      300,     5900,    32000,    63000,   116000,   311000,
+        InstPurchase,      41141,          0,          0,          0,      38741,      43909,      400,     6200,    33000,    65000,   116000,   265000,
+          AssocOfCat,        413,          0,          0,          0,        326,        436,    22000,    38000,    96000,   131150,   182040,   205000,
+      AssocOfProduct,       4108,          0,          0,          0,       3843,       4544,      700,     6500,    33000,    67000,   115000,   230000,
+      BusinessReport,       1029,          0,          0,          0,        880,       1097,    28000,    47000,   105400,   145100,   186000,   252000,
+          CustBuyBeh,       4116,          0,          0,          0,       3874,       4528,      700,     5600,    31000,    61000,   114710,   205000,
+       ProductReturn,      10894,          0,          0,          0,      10401,      11857,      200,     5000,    31000,    66000,   116000,   251000,
+
+  3889s: (50%)   IR =   6918 .........|............................................................ (rIR:aIR:PR = 6918:6911:6911) (tPR = 102261) [OK] 
+  3959s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     419270,          0,          0,     398289,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     398278,          0,          0,          0,     360953,     420109,      300,     6100,    40000,    72000,   144000,   660000,
+     InStorePurchase,     210101,          0,          0,          0,     190327,     221231,      300,     6100,    40000,    72000,   141000,   596000,
+      OnlinePurchase,     146335,          0,          0,          0,     132361,     153971,      300,     6000,    39000,    71000,   147000,   660000,
+        InstPurchase,      41842,          0,          0,          0,      38265,      44907,      400,     6100,    40000,    72000,   149920,   595000,
+          AssocOfCat,        420,          0,          0,          0,        331,        464,    24000,    40500,   105500,   148750,   218200,   660000,
+      AssocOfProduct,       4195,          0,          0,          0,       3859,       4738,      600,     7500,    45000,    80000,   212830,   349000,
+      BusinessReport,       1049,          0,          0,          0,        955,       1267,    29000,    48000,   104200,   144200,   225840,   660000,
+          CustBuyBeh,       4183,          0,          0,          0,       3826,       4775,      200,     3900,    32000,    60000,   125000,   349000,
+       ProductReturn,      11134,          0,          0,          0,       9494,      11275,      200,     6100,    40000,    71200,   147000,   349000,
+
+  3959s: (51%)   IR =   7057 ......|............................................................ (rIR:aIR:PR = 7057:7055:7055) (tPR = 104115) [OK] 
+  4025s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     425569,          0,          0,     404309,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     404290,          0,          0,          0,     360763,     399311,      300,     5600,    28000,    57000,   108000,   225000,
+     InStorePurchase,     213119,          0,          0,          0,     189876,     209954,      300,     5500,    28000,    56000,   107000,   225000,
+      OnlinePurchase,     148504,          0,          0,          0,     133022,     147017,      300,     5800,    29000,    57000,   107000,   225000,
+        InstPurchase,      42667,          0,          0,          0,      37865,      42340,      300,     6100,    29000,    58000,   109000,   225000,
+          AssocOfCat,        427,          0,          0,          0,        361,        489,    27000,    41000,   107000,   127000,   171500,   204000,
+      AssocOfProduct,       4249,          0,          0,          0,       4030,       4667,      400,     7100,    29000,    58000,   108000,   161000,
+      BusinessReport,       1064,          0,          0,          0,        947,       1184,    29000,    46000,    86500,   120000,   190000,   227000,
+          CustBuyBeh,       4256,          0,          0,          0,       4006,       4612,      300,     6800,    37000,    63000,   109000,   178000,
+       ProductReturn,      11266,          0,          0,          0,       9608,      10903,      200,     6000,    28000,    56000,   108960,   176000,
+
+  4025s: (52%)   IR =   7195 ....|............................................................ (rIR:aIR:PR = 7195:7202:7202) (tPR = 107583) [OK] 
+  4090s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     436376,          0,          0,     414602,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     414606,          0,          0,          0,     365066,     390888,      300,     6000,    38000,    73000,   143000,   304000,
+     InStorePurchase,     218114,          0,          0,          0,     191256,     204556,      300,     6100,    38000,    73000,   143000,   304000,
+      OnlinePurchase,     152897,          0,          0,          0,     134738,     144257,      300,     5800,    38000,    73000,   143000,   299000,
+        InstPurchase,      43595,          0,          0,          0,      39072,      42075,      400,     6100,    39000,    74000,   142240,   299000,
+          AssocOfCat,        437,          0,          0,          0,        350,        435,    27000,    43000,   108000,   157000,   240000,   258000,
+      AssocOfProduct,       4369,          0,          0,          0,       4080,       4541,      500,     5900,    34000,    75000,   140000,   219000,
+      BusinessReport,       1085,          0,          0,          0,        957,       1160,    28000,    47000,    82900,   129000,   185780,   226000,
+          CustBuyBeh,       4363,          0,          0,          0,       4080,       4583,      200,     7300,    44000,    82000,   147320,   230000,
+       ProductReturn,      11513,          0,          0,          0,       9896,      10919,      200,     5300,    36000,    72000,   140000,   243000,
+
+  4090s: (53%)   IR =   7334 ..........|............................................................ (rIR:aIR:PR = 7334:7336:7336) (tPR = 109334) [OK] 
+  4161s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     445731,          0,          0,     423443,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     423443,          0,          0,          0,     361696,     426175,      300,     5900,    30000,    60000,   141000,   326000,
+     InStorePurchase,     222852,          0,          0,          0,     189962,     223355,      300,     6100,    31000,    61000,   141000,   293000,
+      OnlinePurchase,     155862,          0,          0,          0,     133267,     157322,      300,     6000,    30000,    61000,   141000,   275000,
+        InstPurchase,      44729,          0,          0,          0,      38467,      45498,      300,     5000,    27000,    56000,   140000,   326000,
+          AssocOfCat,        447,          0,          0,          0,        369,        491,    23000,    40000,    72600,   111000,   192520,   264000,
+      AssocOfProduct,       4447,          0,          0,          0,       4184,       5219,      700,     7300,    35000,    65000,   139800,   247000,
+      BusinessReport,       1109,          0,          0,          0,        963,       1262,    26000,    49000,    87000,   123700,   208740,   286000,
+          CustBuyBeh,       4464,          0,          0,          0,       4138,       5145,      200,     6200,    31000,    63000,   137540,   182000,
+       ProductReturn,      11821,          0,          0,          0,      10085,      12204,      300,     5800,    32000,    62750,   139000,   275000,
+
+  4161s: (54%)   IR =   7472 ......|............................................................ (rIR:aIR:PR = 7472:7468:7468) (tPR = 110687) [OK] 
+  4228s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     454610,          0,          0,     431857,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     431857,          0,          0,          0,     363176,     403398,      300,     6200,    58000,   108000,   167000,   420000,
+     InStorePurchase,     226974,          0,          0,          0,     190943,     211860,      300,     6200,    58000,   109000,   169000,   420000,
+      OnlinePurchase,     159435,          0,          0,          0,     134048,     148826,      300,     6100,    58000,   108000,   166000,   394000,
+        InstPurchase,      45448,          0,          0,          0,      38185,      42712,      400,     6400,    57000,   108000,   167000,   325000,
+          AssocOfCat,        455,          0,          0,          0,        364,        508,    23000,    43000,   101200,   165100,   216280,   270000,
+      AssocOfProduct,       4553,          0,          0,          0,       4177,       4890,      600,     7200,    64900,   117000,   167000,   253000,
+      BusinessReport,       1142,          0,          0,          0,        985,       1220,    29000,    50000,   118900,   167000,   231370,   355000,
+          CustBuyBeh,       4546,          0,          0,          0,       4255,       5023,      300,     6300,    57000,   104000,   169520,   305000,
+       ProductReturn,      12057,          0,          0,          0,      10299,      11826,      200,     6600,    60000,   113000,   172000,   341000,
+
+  4228s: (55%)   IR =   7610 ..........|........................................................... (rIR:aIR:PR = 7610:7627:7625) (tPR = 112955) [OK] 
+  4298s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     458618,          0,          0,     435768,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     436033,          0,          0,          0,     353211,     420813,      300,     6600,    55000,    89000,   179000,   740000,
+     InStorePurchase,     230369,          0,          0,          0,     185967,     221497,      300,     6700,    56000,    90000,   181000,   740000,
+      OnlinePurchase,     160011,          0,          0,          0,     130285,     154862,      300,     6500,    54000,    88000,   179000,   740000,
+        InstPurchase,      45653,          0,          0,          0,      36959,      44454,      300,     6400,    53000,    87000,   169000,   740000,
+          AssocOfCat,        461,          0,          0,          0,        371,        521,    26000,    44000,   118000,   151000,   285040,   477000,
+      AssocOfProduct,       4575,          0,          0,          0,       4203,       5261,      600,     7200,    54000,    86000,   290000,   584000,
+      BusinessReport,       1141,          0,          0,          0,        990,       1298,    30000,    55000,   151000,   187000,   284000,   477000,
+          CustBuyBeh,       4577,          0,          0,          0,       4159,       5121,      200,     5600,    49000,    84000,   263800,   610000,
+       ProductReturn,      12112,          0,          0,          0,       9213,      11243,      500,     5900,    53000,    85000,   173560,   594000,
+
+  4298s: (56%)   IR =   7749 ......|........................................................... (rIR:aIR:PR = 7749:7753:7753) (tPR = 115244) [OK] 
+  4364s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     467087,          0,          0,     443727,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     443733,          0,          0,          0,     355120,     399158,      300,     7400,   109000,   146000,   201000,   487000,
+     InStorePurchase,     233401,          0,          0,          0,     186932,     209630,      300,     7400,   109000,   147000,   206000,   487000,
+      OnlinePurchase,     163619,          0,          0,          0,     130528,     146920,      300,     7400,   108000,   145000,   195000,   487000,
+        InstPurchase,      46713,          0,          0,          0,      37660,      42608,      400,     7200,   110000,   147000,   202000,   487000,
+          AssocOfCat,        469,          0,          0,          0,        371,        483,    26000,    47000,   156000,   190000,   242320,   251000,
+      AssocOfProduct,       4670,          0,          0,          0,       4299,       5070,      500,     6000,    97000,   138450,   186870,   278000,
+      BusinessReport,       1163,          0,          0,          0,       1009,       1251,    28000,    52000,   160800,   192400,   267400,   464000,
+          CustBuyBeh,       4688,          0,          0,          0,       4344,       5052,      300,     7100,   109700,   146000,   204000,   304000,
+       ProductReturn,      12369,          0,          0,          0,       9302,      10696,      200,     7700,   107000,   147000,   205000,   317000,
+
+  4364s: (57%)   IR =   7887 ........|............................................................ (rIR:aIR:PR = 7887:7898:7896) (tPR = 117294) [OK] 
+  4433s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     478678,          0,          0,     454726,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     454798,          0,          0,          0,     354918,     413071,      200,     6800,    70000,   126000,   269000,   650000,
+     InStorePurchase,     238948,          0,          0,          0,     186408,     217198,      300,     6800,    70000,   127000,   260010,   598000,
+      OnlinePurchase,     167988,          0,          0,          0,     130824,     152130,      200,     6800,    70000,   125000,   274000,   650000,
+        InstPurchase,      47862,          0,          0,          0,      37686,      43743,      400,     7200,    72000,   126000,   277000,   620000,
+          AssocOfCat,        481,          0,          0,          0,        382,        533,    24000,    44000,   148000,   206900,   333000,   384000,
+      AssocOfProduct,       4790,          0,          0,          0,       4473,       5348,      500,     6300,    71000,   126000,   246000,   338000,
+      BusinessReport,       1195,          0,          0,          0,       1046,       1370,    30000,    54000,   162900,   219450,   312000,   368000,
+          CustBuyBeh,       4783,          0,          0,          0,       4421,       5352,      200,     6400,    65000,   117000,   245940,   355000,
+       ProductReturn,      12736,          0,          0,          0,       9664,      11396,      200,     6100,    67000,   129000,   246000,   424000,
+
+  4433s: (58%)   IR =   8025 .........|............................................................ (rIR:aIR:PR = 8025:8024:8024) (tPR = 118609) [OK] 
+  4504s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     489243,          0,          0,     464833,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     464833,          0,          0,          0,     359480,     422177,      300,     7000,    68000,   119000,   187000,   537000,
+     InStorePurchase,     245195,          0,          0,          0,     189802,     222824,      300,     7100,    68000,   121000,   186000,   511000,
+      OnlinePurchase,     170765,          0,          0,          0,     132060,     154912,      300,     7000,    67000,   117000,   187000,   537000,
+        InstPurchase,      48873,          0,          0,          0,      37618,      44441,      400,     6900,    67000,   113000,   187000,   427000,
+          AssocOfCat,        485,          0,          0,          0,        393,        571,    25000,    49000,   144800,   178200,   262400,   515000,
+      AssocOfProduct,       4850,          0,          0,          0,       3359,       4110,      500,     7000,    69000,   124000,   183000,   323000,
+      BusinessReport,       1223,          0,          0,          0,       1077,       1378,    31000,    56000,   164100,   198000,   275210,   523000,
+          CustBuyBeh,       4944,          0,          0,          0,       3398,       4149,      600,     6700,    67000,   118000,   178000,   375000,
+       ProductReturn,      12908,          0,          0,          0,       9873,      11847,      300,     7400,    69200,   117000,   192000,   316000,
+
+  4504s: (59%)   IR =   8164 .........|........................................................... (rIR:aIR:PR = 8164:8222:8222) (tPR = 121476) [OK] 
+  4573s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     495747,          0,          0,     471133,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     471178,          0,          0,          0,     351633,     418197,      300,     7500,   109000,   144000,   201000,   660000,
+     InStorePurchase,     249677,          0,          0,          0,     184638,     219461,      300,     7400,   109000,   144000,   201000,   660000,
+      OnlinePurchase,     172532,          0,          0,          0,     129609,     153813,      300,     7700,   110000,   145000,   203000,   660000,
+        InstPurchase,      48969,          0,          0,          0,      37386,      44923,      400,     7300,   101600,   144000,   200000,   281000,
+          AssocOfCat,        494,          0,          0,          0,        394,        551,    25000,    49000,   175000,   211400,   287000,   700000,
+      AssocOfProduct,       4878,          0,          0,          0,       3342,       4216,      500,     7300,    97000,   147000,   201000,   276000,
+      BusinessReport,       1233,          0,          0,          0,       1092,       1407,    28000,    57000,   177200,   205600,   259000,   730000,
+          CustBuyBeh,       4871,          0,          0,          0,       3390,       4236,      200,     6900,    97000,   140000,   198000,   270000,
+       ProductReturn,      13088,          0,          0,          0,       9999,      12239,      300,     8200,   110000,   150000,   202600,   332000,
+
+  4573s: (60%)   IR =   8302 .........|........................................................... (rIR:aIR:PR = 8302:8305:8305) (tPR = 123262) [OK] 
+  4643s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     501630,          0,          0,     476725,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     476725,          0,          0,          0,     351863,     420541,      300,     8100,   130000,   186000,   302000,   700000,
+     InStorePurchase,     250630,          0,          0,          0,     185196,     221170,      300,     8000,   128000,   186000,   302000,   680000,
+      OnlinePurchase,     175695,          0,          0,          0,     129003,     154432,      300,     8200,   131000,   186000,   302000,   700000,
+        InstPurchase,      50400,          0,          0,          0,      37664,      44939,      400,     8400,   131000,   185000,   304000,   471000,
+          AssocOfCat,        497,          0,          0,          0,        399,        566,    29000,    56000,   201000,   272000,   360630,   470000,
+      AssocOfProduct,       5015,          0,          0,          0,       3489,       4363,      500,     6100,   113000,   160000,   291000,   354000,
+      BusinessReport,       1254,          0,          0,          0,       1086,       1431,    30000,    57000,   182000,   244800,   346680,   524000,
+          CustBuyBeh,       5004,          0,          0,          0,       3457,       4367,     1000,     9500,   138000,   195600,   327000,   424000,
+       ProductReturn,      13135,          0,          0,          0,       9023,      10949,      200,     7500,   123000,   173000,   287000,   392000,
+
+  4643s: (61%)   IR =   8441 ..........|........................................................... (rIR:aIR:PR = 8441:8490:8491) (tPR = 127063) [OK] 
+  4713s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     511788,          0,          0,     486141,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     486080,          0,          0,          0,     349308,     423779,      200,     7700,   154000,   226000,   353000,   720000,
+     InStorePurchase,     256321,          0,          0,          0,     183150,     222643,      200,     7700,   155000,   230000,   359000,   610000,
+      OnlinePurchase,     179593,          0,          0,          0,     129453,     156652,      300,     7600,   152000,   218000,   353000,   720000,
+        InstPurchase,      50166,          0,          0,          0,      36705,      44484,      400,     7900,   154000,   226000,   358000,   690000,
+          AssocOfCat,        509,          0,          0,          0,        406,        564,    29000,    49000,   200500,   256750,   453100,   522000,
+      AssocOfProduct,       5084,          0,          0,          0,       3488,       4391,      800,     8700,   154800,   217400,   347080,   467000,
+      BusinessReport,       1262,          0,          0,          0,       1088,       1443,    28000,    59000,   210600,   282000,   377040,   487000,
+          CustBuyBeh,       5123,          0,          0,          0,       3458,       4419,      200,     9400,   158000,   216000,   355600,   467000,
+       ProductReturn,      13679,          0,          0,          0,       9237,      11441,      200,     6200,   149000,   219000,   348580,   502000,
+
+  4713s: (62%)   IR =   8579 ....................|........................................................... (rIR:aIR:PR = 8579:8594:8594) (tPR = 128163) [OK] 
+  4794s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     516385,          0,          0,     490520,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     490524,          0,          0,          0,     355512,     484495,      300,     6700,    54000,   100000,   281000,   477000,
+     InStorePurchase,     256949,          0,          0,          0,     187145,     254670,      300,     6800,    55000,   101000,   288000,   423000,
+      OnlinePurchase,     181943,          0,          0,          0,     130219,     177364,      300,     6500,    52000,    98000,   273000,   477000,
+        InstPurchase,      51632,          0,          0,          0,      38148,      52461,      400,     6500,    54000,    99000,   293000,   423000,
+          AssocOfCat,        517,          0,          0,          0,        426,        675,    27000,    47000,   122400,   187000,   370960,   424000,
+      AssocOfProduct,       5182,          0,          0,          0,       3678,       5206,      500,     6100,    52000,   102000,   262000,   406000,
+      BusinessReport,       1288,          0,          0,          0,       1163,       1738,    30000,    57000,   140000,   199100,   385930,   528000,
+          CustBuyBeh,       5234,          0,          0,          0,       3602,       5153,      500,     7200,    56000,   100000,   263000,   414000,
+       ProductReturn,      13646,          0,          0,          0,       9436,      13151,      300,     6700,    54000,    98000,   286480,   477000,
+
+  4794s: (63%)   IR =   8717 ...........|........................................................... (rIR:aIR:PR = 8717:8762:8762) (tPR = 130763) [OK] 
+  4866s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     529912,          0,          0,     503506,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     503509,          0,          0,          0,     348751,     435003,      300,     7700,   111000,   184000,   343000,   760000,
+     InStorePurchase,     265543,          0,          0,          0,     183622,     228909,      300,     7700,   105000,   178000,   342000,   760000,
+      OnlinePurchase,     185761,          0,          0,          0,     128240,     159965,      300,     7900,   119000,   197000,   344000,   760000,
+        InstPurchase,      52205,          0,          0,          0,      36889,      46129,      400,     7700,   114000,   194000,   342000,   760000,
+          AssocOfCat,        525,          0,          0,          0,        433,        612,    22000,    49000,   173000,   228050,   379960,   479000,
+      AssocOfProduct,       5236,          0,          0,          0,       3597,       4733,      500,     9500,   122000,   196000,   353000,   640000,
+      BusinessReport,       1319,          0,          0,          0,       1169,       1580,    28000,    57000,   191000,   257950,   390190,   780000,
+          CustBuyBeh,       5267,          0,          0,          0,       3645,       4746,      300,     6500,   101000,   173000,   299530,   410000,
+       ProductReturn,      14060,          0,          0,          0,       9632,      12107,      200,     7300,   113000,   185000,   328000,   640000,
+
+  4866s: (64%)   IR =   8856 .........|........................................................... (rIR:aIR:PR = 8856:8787:8787) (tPR = 130709) [OK] 
+  4936s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     531615,          0,          0,     504730,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     504730,          0,          0,          0,     346363,     421783,      300,     9000,   171000,   230000,   428000,   680000,
+     InStorePurchase,     263693,          0,          0,          0,     182210,     221248,      300,     8900,   169000,   226000,   410000,   680000,
+      OnlinePurchase,     187242,          0,          0,          0,     127929,     156012,      300,     8900,   172000,   235000,   449000,   680000,
+        InstPurchase,      53795,          0,          0,          0,      36224,      44523,      400,     9300,   175000,   237000,   458000,   660000,
+          AssocOfCat,        537,          0,          0,          0,        412,        621,    26000,    54000,   208800,   263000,   371700,   462000,
+      AssocOfProduct,       5354,          0,          0,          0,       3718,       4715,      300,     9400,   160000,   224000,   428000,   640000,
+      BusinessReport,       1342,          0,          0,          0,       1189,       1547,    29000,    62000,   234000,   297600,   490000,   640000,
+          CustBuyBeh,       5328,          0,          0,          0,       3712,       4743,      200,     8600,   162000,   238000,   436000,   640000,
+       ProductReturn,      14323,          0,          0,          0,       9789,      11976,      200,     7500,   157000,   222000,   397000,   640000,
+
+  4936s: (65%)   IR =   8994 .......|........................................................... (rIR:aIR:PR = 8994:8972:8972) (tPR = 133496) [OK] 
+  5003s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     540066,          0,          0,     512998,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     512983,          0,          0,          0,     350981,     406541,      300,     7700,   114000,   176000,   311000,   599000,
+     InStorePurchase,     270577,          0,          0,          0,     184822,     213621,      300,     7600,   114000,   177000,   311000,   599000,
+      OnlinePurchase,     188346,          0,          0,          0,     128448,     149278,      300,     7900,   115000,   176000,   311000,   497000,
+        InstPurchase,      54060,          0,          0,          0,      37711,      43642,      400,     7800,   113000,   175000,   319000,   571000,
+          AssocOfCat,        544,          0,          0,          0,        451,        586,    23000,    48000,   142300,   199300,   343520,   414000,
+      AssocOfProduct,       5351,          0,          0,          0,       3800,       4579,      700,     9200,   123000,   187000,   311000,   395000,
+      BusinessReport,       1354,          0,          0,          0,       1165,       1482,    27000,    60000,   188000,   236000,   384510,   489000,
+          CustBuyBeh,       5426,          0,          0,          0,       3843,       4592,      200,     6300,   104700,   164350,   297070,   401000,
+       ProductReturn,      14408,          0,          0,          0,       9904,      11829,      200,     7500,   105000,   162500,   311700,   505000,
+
+  5003s: (66%)   IR =   9132 ................|............................................................ (rIR:aIR:PR = 9132:9129:9129) (tPR = 136009) [OK] 
+  5080s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     553624,          0,          0,     525870,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     525870,          0,          0,          0,     351822,     464963,      200,     8100,   130000,   218000,   324000,   630000,
+     InStorePurchase,     275873,          0,          0,          0,     184079,     243299,      200,     7900,   129000,   214000,   323000,   630000,
+      OnlinePurchase,     194472,          0,          0,          0,     130334,     172001,      200,     8400,   132000,   226000,   325000,   496000,
+        InstPurchase,      55525,          0,          0,          0,      37409,      49663,      400,     7900,   129000,   218000,   321000,   496000,
+          AssocOfCat,        552,          0,          0,          0,        451,        696,    27000,    53500,   201000,   267050,   360090,   459000,
+      AssocOfProduct,       5582,          0,          0,          0,       3955,       5439,      500,     7600,   124000,   220000,   318000,   496000,
+      BusinessReport,       1383,          0,          0,          0,       1194,       1749,    30000,    62000,   219000,   289000,   394000,   511000,
+          CustBuyBeh,       5511,          0,          0,          0,       4019,       5507,      500,     6700,   128000,   217600,   321920,   408000,
+       ProductReturn,      14726,          0,          0,          0,       9125,      12238,      300,     7100,   125000,   213000,   313610,   512000,
+
+  5080s: (67%)   IR =   9271 ...........|........................................................... (rIR:aIR:PR = 9271:9217:9216) (tPR = 136793) [OK] 
+  5152s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     552953,          0,          0,     524976,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     525331,          0,          0,          0,     344185,     428825,      300,     9000,   135000,   209000,   316000,   790000,
+     InStorePurchase,     275667,          0,          0,          0,     180872,     225521,      300,     9000,   135000,   209000,   316000,   790000,
+      OnlinePurchase,     193719,          0,          0,          0,     126710,     157641,      300,     8900,   135000,   209000,   315580,   790000,
+        InstPurchase,      55945,          0,          0,          0,      36603,      45663,      300,     9100,   133000,   206000,   320000,   790000,
+          AssocOfCat,        551,          0,          0,          0,        440,        656,    28000,    60000,   203000,   293000,   335430,   439000,
+      AssocOfProduct,       5541,          0,          0,          0,       3961,       5011,      500,     9200,   134000,   197400,   305000,   414000,
+      BusinessReport,       1388,          0,          0,          0,       1227,       1653,    26000,    60000,   192000,   254000,   370380,   527000,
+          CustBuyBeh,       5521,          0,          0,          0,       3967,       5168,      800,    10700,   148000,   214000,   310000,   790000,
+       ProductReturn,      14684,          0,          0,          0,       9198,      11510,      200,     8500,   127000,   206000,   308890,   446000,
+
+  5152s: (68%)   IR =   9409 .................|.......................................................... (rIR:aIR:PR = 9409:9447:9447) (tPR = 139092) [OK] 
+  5230s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     567711,          0,          0,     539512,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     539509,          0,          0,          0,     342410,     473443,      300,    13300,   235000,   322000,   478000,  1100000,
+     InStorePurchase,     286742,          0,          0,          0,     180481,     248912,      300,    13200,   235000,   316000,   470000,  1100000,
+      OnlinePurchase,     195835,          0,          0,          0,     126014,     174708,      300,    13700,   237000,   324000,   486000,   750000,
+        InstPurchase,      56932,          0,          0,          0,      35915,      49823,      400,    12700,   234000,   319000,   456520,   660000,
+          AssocOfCat,        569,          0,          0,          0,        452,        716,    25000,    63000,   316300,   368350,   466320,   690000,
+      AssocOfProduct,       5654,          0,          0,          0,       4004,       5689,      800,    12500,   240000,   327000,   476200,   588000,
+      BusinessReport,       1413,          0,          0,          0,       1212,       1805,    29000,    71000,   312400,   414200,   555460,   750000,
+          CustBuyBeh,       5664,          0,          0,          0,       4035,       5767,      300,    13400,   232000,   328000,   465000,   640000,
+       ProductReturn,      14890,          0,          0,          0,       9325,      13185,      200,    14000,   246000,   329000,   470000,   640000,
+
+  5230s: (69%)   IR =   9548 ..........|........................................................... (rIR:aIR:PR = 9548:9504:9504) (tPR = 141063) [OK] 
+  5302s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     579779,          0,          0,     550666,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     550664,          0,          0,          0,     343710,     428250,      300,    10900,   225000,   319000,   456000,   890000,
+     InStorePurchase,     289642,          0,          0,          0,     180634,     225470,      300,    10900,   226000,   319000,   462000,   890000,
+      OnlinePurchase,     202204,          0,          0,          0,     125733,     156810,      300,    11000,   225000,   319000,   456000,   870000,
+        InstPurchase,      58818,          0,          0,          0,      37343,      45970,      400,    10800,   220000,   315000,   449000,   670000,
+          AssocOfCat,        575,          0,          0,          0,        474,        685,    27000,    64000,   300200,   367400,   484420,   730000,
+      AssocOfProduct,       5817,          0,          0,          0,       4221,       5350,      500,    11500,   222800,   318000,   480980,   730000,
+      BusinessReport,       1453,          0,          0,          0,       1241,       1704,    29000,    75000,   337500,   406000,   589000,   680000,
+          CustBuyBeh,       5790,          0,          0,          0,       4180,       5274,      200,     8400,   210000,   307000,   460000,   680000,
+       ProductReturn,      15478,          0,          0,          0,       9691,      11995,      200,    11600,   228000,   309000,   460000,   790000,
+
+  5302s: (70%)   IR =   9686 ........|........................................................... (rIR:aIR:PR = 9686:9668:9668) (tPR = 143302) [OK] 
+  5370s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     583923,          0,          0,     554791,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     554799,          0,          0,          0,     337831,     414025,      300,    11100,   184000,   279000,   396000,   710000,
+     InStorePurchase,     292213,          0,          0,          0,     176112,     216937,      300,    11200,   184000,   281000,   393000,   710000,
+      OnlinePurchase,     203080,          0,          0,          0,     125444,     152939,      300,    11100,   186000,   278000,   399000,   710000,
+        InstPurchase,      59506,          0,          0,          0,      36275,      44149,      300,    10700,   179000,   277000,   392000,   610000,
+          AssocOfCat,        584,          0,          0,          0,        490,        694,    25000,    59500,   229000,   336750,   476150,   620000,
+      AssocOfProduct,       5878,          0,          0,          0,       4142,       5064,      800,    10400,   169000,   284750,   408700,   582000,
+      BusinessReport,       1462,          0,          0,          0,       1266,       1616,    30000,    71000,   276000,   365300,   515130,   660000,
+          CustBuyBeh,       5832,          0,          0,          0,       4240,       5215,      600,    12500,   183000,   297000,   417000,   710000,
+       ProductReturn,      15381,          0,          0,          0,       9813,      11908,      300,     9700,   168100,   274000,   391910,   574000,
+
+  5370s: (71%)   IR =   9824 ..............................|.......................................................... (rIR:aIR:PR = 9824:9816:9816) (tPR = 146149) [OK] 
+  5462s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     593597,          0,          0,     564013,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     564002,          0,          0,          0,     324889,     553429,      300,    14000,   347000,   457000,   630000,  1000000,
+     InStorePurchase,     296008,          0,          0,          0,     169678,     291649,      300,    14200,   343000,   451000,   630000,   940000,
+      OnlinePurchase,     208405,          0,          0,          0,     120261,     203743,      300,    13800,   350000,   464000,   630000,  1000000,
+        InstPurchase,      59589,          0,          0,          0,      34950,      58037,      400,    13300,   348000,   466000,   610000,   900000,
+          AssocOfCat,        591,          0,          0,          0,        448,        876,    27000,    66000,   368600,   465200,   720000,   930000,
+      AssocOfProduct,       5910,          0,          0,          0,       4106,       7096,      400,    12900,   344300,   436150,   580000,   790000,
+      BusinessReport,       1492,          0,          0,          0,       1238,       2263,    32000,    72000,   400600,   512600,   683600,   790000,
+          CustBuyBeh,       5939,          0,          0,          0,       4006,       7118,      500,    12500,   348100,   444000,   582000,   810000,
+       ProductReturn,      15653,          0,          0,          0,       8380,      14492,      200,    12000,   334700,   430000,   590000,   810000,
+
+  5462s: (72%)   IR =   9963 ...................|........................................................... (rIR:aIR:PR = 9963:9966:9966) (tPR = 148551) [OK] 
+  5543s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     602932,          0,          0,     572807,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     573090,          0,          0,          0,     338521,     483815,      200,    16700,   262000,   345000,   448000,   770000,
+     InStorePurchase,     301017,          0,          0,          0,     176475,     253524,      300,    16500,   262000,   345000,   447000,   720000,
+      OnlinePurchase,     212006,          0,          0,          0,     124439,     178404,      200,    16900,   262000,   345000,   448000,   720000,
+        InstPurchase,      60067,          0,          0,          0,      37607,      51887,      400,    16800,   266000,   352000,   454120,   770000,
+          AssocOfCat,        606,          0,          0,          0,        462,        728,    30000,    69000,   292700,   377300,   477680,   525000,
+      AssocOfProduct,       6106,          0,          0,          0,       4371,       6362,     1400,    18150,   269000,   345850,   457000,   585000,
+      BusinessReport,       1520,          0,          0,          0,       1294,       1976,    25000,    81000,   332000,   403450,   532000,   830000,
+          CustBuyBeh,       6108,          0,          0,          0,       4375,       6339,      300,    13600,   253000,   338000,   426000,   553000,
+       ProductReturn,      15732,          0,          0,          0,       8870,      13089,      600,    17000,   262000,   346000,   458000,   577000,
+
+  5543s: (73%)   IR =  10101 ...........|......................................................... (rIR:aIR:PR = 10101:10141:10141) (tPR = 149784) [OK] 
+  5614s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     609989,          0,          0,     579993,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     579747,          0,          0,          0,     323017,     432287,      200,    33000,   342000,   419000,   563000,   910000,
+     InStorePurchase,     305708,          0,          0,          0,     168978,     226739,      200,    34000,   347000,   426000,   549000,   910000,
+      OnlinePurchase,     212529,          0,          0,          0,     118703,     159547,      300,    33000,   334000,   410000,   563000,   720000,
+        InstPurchase,      61510,          0,          0,          0,      35336,      46001,      400,    32000,   352000,   424000,   582000,   830000,
+          AssocOfCat,        603,          0,          0,          0,        477,        688,    29000,    88000,   382100,   459550,   590000,   670000,
+      AssocOfProduct,       6021,          0,          0,          0,       3134,       4294,      500,    28000,   328000,   393000,   504000,   650000,
+      BusinessReport,       1520,          0,          0,          0,       1213,       1744,    33000,   105000,   439500,   500500,   655500,   770000,
+          CustBuyBeh,       5974,          0,          0,          0,       3094,       4326,      300,    39000,   364000,   419000,   579190,   680000,
+       ProductReturn,      16054,          0,          0,          0,       8799,      11948,      400,    29000,   335000,   404000,   522000,   690000,
+
+  5614s: (74%)   IR =  10239 ..........................|.......................................................... (rIR:aIR:PR = 10239:10282:10282) (tPR = 151735) [OK] 
+  5701s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     620010,          0,          0,     589099,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     589004,          0,          0,          0,     331707,     525536,      200,    12500,   188000,   386000,   588000,  1300000,
+     InStorePurchase,     310670,          0,          0,          0,     175188,     277328,      200,    12400,   187000,   386000,   583000,  1300000,
+      OnlinePurchase,     216347,          0,          0,          0,     121717,     192851,      300,    12400,   191000,   385000,   593000,   900000,
+        InstPurchase,      61987,          0,          0,          0,      34802,      55357,      400,    12700,   187000,   398000,   597000,   740000,
+          AssocOfCat,        613,          0,          0,          0,        509,        928,    27000,    61000,   268100,   467200,   650000,   750000,
+      AssocOfProduct,       6136,          0,          0,          0,       3193,       5206,      600,    10700,   166000,   384650,   564000,   940000,
+      BusinessReport,       1551,          0,          0,          0,       1322,       2159,    30000,    74000,   271000,   474000,   738000,  1100000,
+          CustBuyBeh,       6262,          0,          0,          0,       3262,       5360,      300,     9400,   158000,   345000,   613900,   810000,
+       ProductReturn,      16367,          0,          0,          0,       9412,      14834,      200,     9200,   173500,   383000,   570000,   910000,
+
+  5701s: (75%)   IR =  10378 ...........|........................................................ (rIR:aIR:PR = 10378:10300:10300) (tPR = 152066) [OK] 
+  5773s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     624759,          0,          0,     593607,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     594046,          0,          0,          0,     265310,     432246,      300,    49000,   620000,   820000,  1300000,  2200000,
+     InStorePurchase,     314360,          0,          0,          0,     138792,     226893,      300,    49000,   620000,   830000,  1300000,  2200000,
+      OnlinePurchase,     216710,          0,          0,          0,      98383,     159190,      300,    50000,   640000,   820000,  1300000,  2100000,
+        InstPurchase,      62976,          0,          0,          0,      28135,      46163,      300,    46000,   565000,   720000,  1300000,  1900000,
+          AssocOfCat,        624,          0,          0,          0,        434,        736,    30000,    92000,   630000,   790000,  1200000,  1400000,
+      AssocOfProduct,       6237,          0,          0,          0,       2955,       4466,      800,    53000,   542000,   826500,  1100000,  1500000,
+      BusinessReport,       1572,          0,          0,          0,       1144,       1811,    29000,   113000,   620000,   760000,  1200000,  1500000,
+          CustBuyBeh,       6230,          0,          0,          0,       2965,       4445,      200,    34000,   512000,   700000,   980800,  1500000,
+       ProductReturn,      16519,          0,          0,          0,       8158,      12385,      200,    48000,   597000,   870000,  1400000,  2000000,
+
+  5773s: (76%)   IR =  10516 ..............|......................................................... (rIR:aIR:PR = 10516:10534:10537) (tPR = 157124) [OK] 
+  5848s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     634139,          0,          0,     602784,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     602499,          0,          0,          0,     314475,     448500,      300,    45000,   386000,   463000,   600000,   870000,
+     InStorePurchase,     317519,          0,          0,          0,     165348,     236182,      300,    44000,   380000,   463000,   589000,   800000,
+      OnlinePurchase,     222088,          0,          0,          0,     115701,     164591,      300,    46000,   394000,   472000,   600000,   870000,
+        InstPurchase,      62892,          0,          0,          0,      33426,      47727,      400,    47000,   393000,   475000,   610000,   870000,
+          AssocOfCat,        625,          0,          0,          0,        507,        811,    31000,    95000,   439800,   499000,   690000,   870000,
+      AssocOfProduct,       6174,          0,          0,          0,       3222,       4781,      500,    39000,   370000,   451800,   620000,   760000,
+      BusinessReport,       1575,          0,          0,          0,       1288,       1919,    34000,   120000,   461000,   530000,   680000,   850000,
+          CustBuyBeh,       6242,          0,          0,          0,       3183,       4742,      200,    40000,   375000,   458000,   599000,   760000,
+       ProductReturn,      16639,          0,          0,          0,       9260,      13199,      200,    45000,   356000,   435000,   593000,   900000,
+
+  5848s: (77%)   IR =  10654 ........................|.......................................................... (rIR:aIR:PR = 10654:10656:10655) (tPR = 158968) [OK] 
+  5934s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     646960,          0,          0,     614501,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     614780,          0,          0,          0,     318024,     515431,      300,    50000,   354000,   438000,   579000,   940000,
+     InStorePurchase,     323906,          0,          0,          0,     166708,     270864,      300,    49000,   355000,   436000,   579000,   780000,
+      OnlinePurchase,     226548,          0,          0,          0,     117446,     190361,      300,    51000,   355000,   442000,   583000,   940000,
+        InstPurchase,      64326,          0,          0,          0,      33870,      54206,      400,    51000,   353000,   434000,   579000,   780000,
+          AssocOfCat,        649,          0,          0,          0,        517,        915,    29000,   109000,   430400,   520000,   676800,   820000,
+      AssocOfProduct,       6446,          0,          0,          0,       3415,       5628,      400,    51000,   340000,   431000,   530000,   760000,
+      BusinessReport,       1608,          0,          0,          0,       1348,       2331,    30000,   112000,   418000,   495400,   660000,   790000,
+          CustBuyBeh,       6473,          0,          0,          0,       3445,       5702,      400,    53000,   322000,   402000,   546000,   750000,
+       ProductReturn,      17288,          0,          0,          0,       8440,      13725,      200,    43000,   336000,   428000,   620000,  1100000,
+
+  5934s: (78%)   IR =  10793 ...................|.......................................................... (rIR:aIR:PR = 10793:10872:10843) (tPR = 161646) [OK] 
+  6016s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     673001,          0,          0,     639359,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     638364,          0,          0,          0,     311107,     495391,      300,    49000,   428000,   532000,   750000,  1000000,
+     InStorePurchase,     334657,          0,          0,          0,     162881,     259484,      300,    48000,   423000,   534000,   750000,  1000000,
+      OnlinePurchase,     236333,          0,          0,          0,     114121,     182518,      300,    49000,   435000,   532000,   760000,  1000000,
+        InstPurchase,      67374,          0,          0,          0,      34105,      53389,      300,    49000,   420000,   527000,   740000,  1000000,
+          AssocOfCat,        678,          0,          0,          0,        524,        897,    32000,   109000,   504000,   590000,   750000,   780000,
+      AssocOfProduct,       6809,          0,          0,          0,       3412,       5447,      600,    47000,   452000,   548000,   720000,   960000,
+      BusinessReport,       1679,          0,          0,          0,       1368,       2225,    35000,   123000,   460400,   552000,   730000,   910000,
+          CustBuyBeh,       6613,          0,          0,          0,       3458,       5489,      200,    44000,   413000,   498000,   760000,   910000,
+       ProductReturn,      17913,          0,          0,          0,       8581,      13376,      200,    54000,   430000,   497150,   650000,  1000000,
+
+  6016s: (79%)   IR =  10931 ......|............................................................ (rIR:aIR:PR = 10931:10826:10826) (tPR = 160255) [OK] 
+  6092s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     746298,          0,          0,     709112,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     709424,          0,          0,          0,     197794,     451873,      200,   334000,   950000,  1100000,  1400000,  2000000,
+     InStorePurchase,     373309,          0,          0,          0,     102459,     236877,      300,   338000,   960000,  1100000,  1400000,  1800000,
+      OnlinePurchase,     261489,          0,          0,          0,      72248,     166790,      200,   337000,   940000,  1200000,  1400000,  1800000,
+        InstPurchase,      74626,          0,          0,          0,      23087,      48206,      400,   311000,   980000,  1200000,  1400000,  2000000,
+          AssocOfCat,        751,          0,          0,          0,        399,        780,    31000,   365000,   828000,   900000,  1200000,  1500000,
+      AssocOfProduct,       7476,          0,          0,          0,       2817,       5147,     1300,   306000,   830000,  1100000,  1300000,  1500000,
+      BusinessReport,       1880,          0,          0,          0,       1081,       2049,    34000,   394000,  1000000,  1200000,  1400000,  1700000,
+          CustBuyBeh,       7443,          0,          0,          0,       2743,       5048,      800,   309000,   850000,   980000,  1200000,  1500000,
+       ProductReturn,      19657,          0,          0,          0,       6181,      12623,      200,   355000,   990000,  1200000,  1400000,  1800000,
+
+  6092s: (80%)   IR =  11070 ...........................|......................................................... (rIR:aIR:PR = 11070:11166:11167) (tPR = 165878) [OK] 
+  6182s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     679167,          0,          0,     645770,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     645314,          0,          0,          0,     285470,     542128,      300,   110000,   468000,   563000,   730000,  1300000,
+     InStorePurchase,     340366,          0,          0,          0,     148009,     284307,      300,   108000,   464000,   563000,   720000,  1300000,
+      OnlinePurchase,     237436,          0,          0,          0,     105222,     200058,      300,   112000,   476000,   560000,   730000,  1300000,
+        InstPurchase,      67512,          0,          0,          0,      32239,      57763,      400,   113000,   475600,   569000,   730000,  1300000,
+          AssocOfCat,        676,          0,          0,          0,        501,        944,    27000,   183000,   517500,   600000,   820000,  1100000,
+      AssocOfProduct,       6676,          0,          0,          0,       3374,       6361,      500,    97000,   451000,   525000,   660000,  1100000,
+      BusinessReport,       1686,          0,          0,          0,       1291,       2461,    35000,   172000,   506000,   562800,   760000,   980000,
+          CustBuyBeh,       6672,          0,          0,          0,       3270,       6139,      300,   103000,   466000,   521000,   660000,  1300000,
+       ProductReturn,      17724,          0,          0,          0,       8815,      15103,      700,   111000,   470000,   553000,   780000,  1100000,
+
+  6182s: (81%)   IR =  11208 ............................ (rIR:aIR:PR = 11208:11087:11090) (tPR = 163184) [IR is under limit] [PR is under limit] 
+  6212s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     248810,          0,          0,     236319,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     235931,          0,          0,          0,      83779,     178291,      300,   171000,   620000,   710000,   850000,   970000,
+     InStorePurchase,     123357,          0,          0,          0,      43086,      93515,      300,   173000,   620000,   690000,   830000,   960000,
+      OnlinePurchase,      86905,          0,          0,          0,      30936,      65863,      300,   170000,   620000,   710000,   830000,   970000,
+        InstPurchase,      25669,          0,          0,          0,       9757,      18913,      400,   173000,   630000,   720000,   890000,   920000,
+          AssocOfCat,        250,          0,          0,          0,        180,        325,    28000,   298000,   650000,   740000,   830000,   880000,
+      AssocOfProduct,       2521,          0,          0,          0,       1096,       2088,      500,   170000,   521000,   555550,   721100,   990000,
+      BusinessReport,        625,          0,          0,          0,        430,        783,    34000,   227000,   588000,   690000,   820000,   930000,
+          CustBuyBeh,       2506,          0,          0,          0,       1134,       2167,      500,   195000,   551000,   680000,   803200,   960000,
+       ProductReturn,       6580,          0,          0,          0,       2998,       5137,      200,   166000,   620000,   690000,   870000,   900000,
+
+  6212s: 
+  6212s: Failed, 9 overall retries left, retrying 1 of 1
+  6212s: (81%)   IR =  11208 .............................|....................................................... (rIR:aIR:PR = 11208:11193:11194) (tPR = 165225) [OK] 
+  6303s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     674963,          0,          0,     641338,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     640853,          0,          0,          0,     252302,     548273,      300,   194000,   564000,   650000,   770000,  1200000,
+     InStorePurchase,     339032,          0,          0,          0,     128768,     288759,      300,   192000,   560000,   640000,   770000,  1200000,
+      OnlinePurchase,     234000,          0,          0,          0,      93935,     201575,      300,   196000,   564000,   660000,   770000,  1100000,
+        InstPurchase,      67821,          0,          0,          0,      29599,      57939,      400,   195000,   582000,   640000,   800000,  1100000,
+          AssocOfCat,        676,          0,          0,          0,        458,       1046,    36000,   287500,   680000,   766500,   830000,   940000,
+      AssocOfProduct,       6806,          0,          0,          0,       3159,       6445,      600,   186000,   535400,   610000,   730000,   990000,
+      BusinessReport,       1692,          0,          0,          0,       1207,       2445,    36000,   259000,   640000,   730000,   860000,  1100000,
+          CustBuyBeh,       6742,          0,          0,          0,       3151,       6455,      500,   177000,   536000,   620000,   744400,   970000,
+       ProductReturn,      17684,          0,          0,          0,       8337,      16006,      200,   182000,   532000,   610000,   769300,   990000,
+
+  6303s: (82%)   IR =  11346 .........|............................................................................ (rIR:aIR:PR = 11346:11247:11215) (tPR = 168716) [PR is under limit] 
+  6403s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,    1013867,          0,          0,     963758,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     967365,          0,          0,          0,     157947,     600082,      300,   523000,  1600000,  2000000,  2500000,  3500000,
+     InStorePurchase,     505740,          0,          0,          0,      80575,     315514,      300,   510000,  1600000,  1900000,  2200000,  3200000,
+      OnlinePurchase,     360938,          0,          0,          0,      56650,     220292,      300,   523000,  1700000,  2300000,  2500000,  3500000,
+        InstPurchase,     100687,          0,          0,          0,      20722,      64276,      800,   563000,  1800000,  2100000,  2600000,  3100000,
+          AssocOfCat,       1003,          0,          0,          0,        363,       1137,    39000,   458000,  1500000,  2010000,  2662000,  2700000,
+      AssocOfProduct,      10266,          0,          0,          0,       2659,       7175,     1300,   482000,  1700000,  1900000,  2300000,  2700000,
+      BusinessReport,       2517,          0,          0,          0,       1043,       2859,    41000,   550000,  1600000,  1800000,  2400000,  2700000,
+          CustBuyBeh,      10176,          0,          0,          0,       2797,       7211,      900,   531000,  1600000,  1900000,  2400000,  2700000,
+       ProductReturn,      26491,          0,          0,          0,       5980,      15800,      200,   527000,  1700000,  2000000,  2300000,  2700000,
+
+  6403s: 
+  6403s: Failed, 8 overall retries left, retrying 1 of 1
+  6403s: (82%)   IR =  11346 .....................................?.....?........|..................................................... (rIR:aIR:PR = 11346:11400:11360) (tPR = 169100) [OK] 
+  6527s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     682441,          0,          0,     649173,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     651615,          0,          0,          0,     152944,     746214,      300,   640000,  1100000,  1300000,  1700000,  2500000,
+     InStorePurchase,     341387,          0,          0,          0,      78228,     392235,      300,   640000,  1100000,  1300000,  1700000,  2400000,
+      OnlinePurchase,     240666,          0,          0,          0,      54769,     274167,      300,   640000,  1100000,  1300000,  1600000,  2500000,
+        InstPurchase,      69562,          0,          0,          0,      19947,      79812,      500,   640000,  1200000,  1400000,  1800000,  2100000,
+          AssocOfCat,        681,          0,          0,          0,        360,       1434,    34000,   630000,  1100000,  1300000,  1500000,  1600000,
+      AssocOfProduct,       6896,          0,          0,          0,       2280,       8851,     1000,   590000,  1200000,  1400000,  1800000,  2200000,
+      BusinessReport,       1713,          0,          0,          0,        927,       3423,    39000,   630000,  1200000,  1400000,  1500000,  1800000,
+          CustBuyBeh,       6896,          0,          0,          0,       2390,       8886,      200,   610000,  1200000,  1400000,  1800000,  2000000,
+       ProductReturn,      17810,          0,          0,          0,       4923,      19497,      300,   578000,  1200000,  1300000,  1600000,  2400000,
+
+  6527s: (83%)   IR =  11485 ..................|........................................................ (rIR:aIR:PR = 11485:11403:11373) (tPR = 168802) [OK] 
+  6610s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     715472,          0,          0,     679490,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     681875,          0,          0,          0,     179653,     490037,      300,   332000,   840000,   950000,  1200000,  2000000,
+     InStorePurchase,     358159,          0,          0,          0,      93256,     256683,      300,   330000,   840000,   950000,  1200000,  1500000,
+      OnlinePurchase,     251438,          0,          0,          0,      63980,     181483,      300,   332000,   840000,   940000,  1100000,  1800000,
+        InstPurchase,      72278,          0,          0,          0,      22417,      51871,      300,   346000,   850000,   990000,  1400000,  2000000,
+          AssocOfCat,        719,          0,          0,          0,        417,        940,    41000,   400500,   800000,   940000,  1100000,  1200000,
+      AssocOfProduct,       7072,          0,          0,          0,       2476,       6120,     1600,   327000,   740000,   900000,  1200000,  1500000,
+      BusinessReport,       1791,          0,          0,          0,       1039,       2308,    41000,   412000,   850000,  1100000,  1300000,  1400000,
+          CustBuyBeh,       7099,          0,          0,          0,       2461,       6093,      500,   331000,   710000,   860000,  1100000,  1200000,
+       ProductReturn,      19344,          0,          0,          0,       6181,      13295,      400,   332000,   690000,   800000,  1100000,  1400000,
+
+  6610s: (84%)   IR =  11623 ............|......................................................................... (rIR:aIR:PR = 11623:11434:11123) (tPR = 165489) [IR is under limit] [PR is under limit] 
+  6713s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,    1000961,          0,          0,     950894,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     979395,          0,          0,          0,      62685,     618196,      400,   920000,  2900000,  3500000,  4800000,  8100000,
+     InStorePurchase,     515265,          0,          0,          0,      33247,     325263,      400,   880000,  2900000,  3500000,  4800000,  8100000,
+      OnlinePurchase,     360782,          0,          0,          0,      22723,     227864,      400,   940000,  2800000,  3300000,  4500000,  8100000,
+        InstPurchase,     103348,          0,          0,          0,       6715,      65069,      400,   920000,  3100000,  4000000,  4800000,  5700000,
+          AssocOfCat,       1040,          0,          0,          0,        201,       1122,    42000,   750000,  2200000,  2300000,  3900000,  4600000,
+      AssocOfProduct,      10417,          0,          0,          0,       1436,       7692,     1200,   780000,  2300000,  2600000,  3600000,  5700000,
+      BusinessReport,       2596,          0,          0,          0,        517,       2904,    74000,   970000,  2900000,  4300000,  5600000,  5700000,
+          CustBuyBeh,      10168,          0,          0,          0,       1324,       7562,     5500,   900000,  2700000,  3300000,  4200000,  4300000,
+       ProductReturn,      27393,          0,          0,          0,       3338,      17106,     1300,  1100000,  2900000,  3400000,  4400000,  5600000,
+
+  6713s: 
+  6713s: Failed, 7 overall retries left, retrying 1 of 1
+  6713s: (84%)   IR =  11623 .............................................................................................................................................. (rIR:aIR:PR = 11623:10684:12085) (tPR = 180298) [IR is under limit] [PR is over limit] 
+  6894s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     283386,          0,          0,     267271,      59.47, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     238090,          0,          0,          0,       1491,    1062079,     2200,  2600000,  4900000,  5700000,  7300000, 13000000,
+     InStorePurchase,     125070,          0,          0,          0,        125,     559072,     2200,  2500000,  4800000,  5700000,  7300000, 13000000,
+      OnlinePurchase,      88818,          0,          0,          0,        767,     391186,     2200,  2800000,  5000000,  5800000,  7300000, 12000000,
+        InstPurchase,      24202,          0,          0,          0,        599,     111821,     2700,  2700000,  5100000,  5700000,  7300000, 12000000,
+          AssocOfCat,        223,          0,          0,          0,         11,       1948,   354000,  2600000,  4810000,  6755000, 12000000, 13000000,
+      AssocOfProduct,       2377,          0,          0,          0,         68,      13342,     2800,  2600000,  4900000,  5100000,  6000000, 13000000,
+      BusinessReport,        545,          0,          0,          0,         13,       5009,   207000,  2700000,  4700000,  5100000,  5600000,  8300000,
+          CustBuyBeh,       2420,          0,          0,          0,         76,      13335,     6600,  2900000,  5000000,  5500000,  7100000,  8000000,
+       ProductReturn,       6671,          0,          0,          0,         50,      29154,     2200,  2500000,  5100000,  5800000,  6800000, 12000000,
+
+  6894s: 
+  6894s: Failing in a row, point 1 of 3
+  6894s: (85%)   IR =  11761 ........................ (rIR:aIR:PR = 11761:12334:11484) (tPR = 169681) [IR is over limit] [PR is under limit] 
+  6926s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     290487,          0,          0,     274104,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     299066,          0,          0,          0,      12545,     181176,     1100,  1100000,  2800000,  3500000,  4300000,  5000000,
+     InStorePurchase,     158133,          0,          0,          0,       6555,      94775,     1100,  1200000,  2800000,  3400000,  4200000,  4500000,
+      OnlinePurchase,     109556,          0,          0,          0,       4611,      66824,     2500,   990000,  2300000,  3100000,  4200000,  5000000,
+        InstPurchase,      31377,          0,          0,          0,       1379,      19577,     5800,  1200000,  4300000,  4300000,  4300000,  4400000,
+          AssocOfCat,        303,          0,          0,          0,         57,        346,   130000,   840000,  1300000,  1800000,  3106000,  3600000,
+      AssocOfProduct,       3237,          0,          0,          0,        161,       2379,    19100,   840000,  1900000,  2400000,  3000000,  3200000,
+      BusinessReport,        806,          0,          0,          0,        147,        823,    83000,  1100000,  2100000,  2800000,  3300000,  3600000,
+          CustBuyBeh,       3152,          0,          0,          0,        153,       2309,     4600,   760000,  1700000,  2000000,  2200000,  3300000,
+       ProductReturn,       8649,          0,          0,          0,        374,       5101,     4600,   860000,  1300000,  1700000,  2500000,  3300000,
+
+  6926s: 
+  6926s: Failing in a row, point 2 of 3
+  6926s: (86%)   IR =  11900 .....................?. (rIR:aIR:PR = 11900:11561:12058) (tPR = 181336) [IR is under limit] [PR is over limit] 
+  6957s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     325456,          0,          0,     306119,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     297229,          0,          0,          0,       4861,     172401,     1100,  2000000,  4300000,  4800000,  5700000,  9300000,
+     InStorePurchase,     156601,          0,          0,          0,       2549,      90652,     1400,  2000000,  4400000,  4800000,  5200000,  9300000,
+      OnlinePurchase,     110590,          0,          0,          0,       1830,      63317,     1100,  2000000,  4100000,  4900000,  6200000,  7400000,
+        InstPurchase,      30038,          0,          0,          0,        482,      18432,     3000,  2200000,  4100000,  4600000,  5400000,  7400000,
+          AssocOfCat,        304,          0,          0,          0,         12,        332,   107000,  1500000,  3200000,  3300000,  3300000,  3300000,
+      AssocOfProduct,       3069,          0,          0,          0,        134,       2166,    22000,  2500000,  3500000,  4200000,  4900000,  5800000,
+      BusinessReport,        732,          0,          0,          0,         38,        842,    78000,  1700000,  3000000,  3200000,  3400000,  6000000,
+          CustBuyBeh,       2887,          0,          0,          0,        124,       2185,    34000,  1600000,  4400000,  5300000,  6100000,  6300000,
+       ProductReturn,       7833,          0,          0,          0,        249,       4869,     4300,  2000000,  4500000,  5800000,  7200000,  7600000,
+
+  6957s: 
+  6957s: Failing in a row, point 3 of 3
+  6957s: (87%)   IR =  12038 ........................ (rIR:aIR:PR = 12038:11411:10820) (tPR = 163901) [IR is under limit] [PR is under limit] 
+  6987s: Performance info:
+         Transaction,    Success,    Partial,     Failed,   Receipts, AvgBarcode, 
+             Overall,     268831,          0,          0,     252268,      59.48, 
+         Response times:
+             Request,    Success,    Partial,     Failed,   SkipFail,     Probes,    Samples,      min,      p50,      p90,      p95,      p99,      max, 
+       TotalPurchase,     267657,          0,          0,          0,       3973,     146684,   178000,  3000000,  6800000,  7500000,  8200000,  8500000,
+     InStorePurchase,     139440,          0,          0,          0,       2154,      77640,   178000,  3200000,  6800000,  7500000,  8200000,  8500000,
+      OnlinePurchase,      98979,          0,          0,          0,       1372,      53770,   178000,  2900000,  6800000,  7500000,  8200000,  8500000,
+        InstPurchase,      29238,          0,          0,          0,        447,      15274,   266000,  3600000,  7200000,  7600000,  8200000,  8500000,
+          AssocOfCat,        277,          0,          0,          0,         34,        302,   258000,   790000,  2900000,  3485000,  4000000,  4100000,
+      AssocOfProduct,       2991,          0,          0,          0,        108,       1423,   225000,  2400000,  4200000,  4600000,  4700000,  6500000,
+      BusinessReport,        709,          0,          0,          0,        105,        717,   266000,  2300000,  6100000,  6600000,  7100000,  7200000,
+          CustBuyBeh,       3021,          0,          0,          0,        135,       1417,   158000,  1500000,  6100000,  7400000,  8100000,  8500000,
+       ProductReturn,       7770,          0,          0,          0,        248,       4354,   287000,  1700000,  3600000,  3800000,  4480000,  8200000,
+
+  6987s: Ending RT curve measurement because max-jOPS reached (too many failed points in a row)
+  6987s: max-jOPS is presumably 11485
+  6987s: 
+  6987s: Settling (term) (init) ... OK
+  7001s: 
+  7001s: Running for validation
+  7001s: (load =  0%) ...|.......... (rIR:aIR:PR = 0:0:0) (tPR = 0) [OK] 
+  7014s: (load = 10%) .....|.......... (rIR:aIR:PR = 1149:1146:1122) (tPR = 20416) [OK] 
+  7029s: (load = 20%) .....|.......... (rIR:aIR:PR = 2297:2308:2297) (tPR = 39113) [OK] 
+  7044s: (load = 30%) ....|.......... (rIR:aIR:PR = 3446:3448:3448) (tPR = 52301) [OK] 
+  7058s: (load = 40%) ....|.......... (rIR:aIR:PR = 4594:4595:4595) (tPR = 70549) [OK] 
+  7072s: (load = 50%) ....|.......... (rIR:aIR:PR = 5743:5742:5742) (tPR = 87665) [OK] 
+  7086s: (load = 60%) ....|.......... (rIR:aIR:PR = 6891:6939:6939) (tPR = 103471) [OK] 
+  7100s: (load = 70%) ....|.......... (rIR:aIR:PR = 8040:7985:7986) (tPR = 118661) [OK] 
+  7115s: (load = 80%) .......|.......... (rIR:aIR:PR = 9188:9090:9097) (tPR = 133928) [OK] 
+  7132s: (load = 90%) .....|.......... (rIR:aIR:PR = 10337:10232:10212) (tPR = 153409) [OK] 
+  7148s: (load = 100%) .............|......... (rIR:aIR:PR = 11485:11281:11067) (tPR = 169691) [OK] 
+  7175s: Validating... (quiescence.....) (stop TxI) (stop BE) (saving... 232874 Kb) (validation=PASSED)(term) (init) ... ...completed!
+  7193s: Restarting (term) (init) ... OK
+  7199s: 
+  7199s: 
+  7199s: Profiling....|.............................. (rIR:aIR:PR = 1148:1147:1147) (tPR = 16911) [OK] 
+  7233s:  OK
+  7233s: (term... (rIR:aIR:PR = 0:0:0) (tPR = 0) [OK] 
+  7236s: ) 
