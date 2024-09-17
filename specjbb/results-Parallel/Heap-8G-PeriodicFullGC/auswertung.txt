@@ -1,0 +1,115 @@
+**** COH-OFF *****
+
+
+**** COH-ON *****
+
+
+**** COH-OFF *****
+
+Processing results-COH-OFF-Parallel-FullGC-8G-0/composite.out ...
+Processing results-COH-OFF-Parallel-FullGC-8G-1/composite.out ...
+Processing results-COH-OFF-Parallel-FullGC-8G-2/composite.out ...
+Processing results-COH-OFF-Parallel-FullGC-8G-3/composite.out ...
+
+
+*** results of 4 runs: ***
+
+run,gc-count,usage-pre,usage-post,pause,real,user,sys
+0,3048,5589.0,1346.9,376.539,376.7,2054.97,74.26
+1,3092,5608.7,1370.9,384.343,384.15,2081.85,79.34
+2,3097,5621.8,1371.8,385.760,386.18,2100.61,79.18
+3,3327,5620.8,1381.8,414.082,414.23,2247.45,84.81
+
+*** Mean values and deviations for 4 runs: ***
+Number of GCs:            : 3141.0 	(sstdev 125.9, (4.00%)
+Usage before GC (MB)      : 5610.1 	(sstdev 15.3, (.27%)
+Usage after GC (MB)       : 1367.9 	(sstdev 14.8, (1.08%)
+Sum pause times (seconds) : 390.18 	(sstdev 16.4, (4.20%)
+Sum GC Real (seconds)     : 390.32 	(sstdev 16.5, (4.22%)
+Sum GC User (seconds)     : 2121.22 	(sstdev 86.2, (4.06%)
+Sum GC Sys (seconds)      : 79.40 	(sstdev 4.3, (5.41%)
+
+**** COH-ON *****
+
+Processing results-COH-ON-Parallel-FullGC-8G-0/composite.out ...
+Processing results-COH-ON-Parallel-FullGC-8G-1/composite.out ...
+Processing results-COH-ON-Parallel-FullGC-8G-2/composite.out ...
+Processing results-COH-ON-Parallel-FullGC-8G-3/composite.out ...
+
+
+*** results of 4 runs: ***
+
+run,gc-count,usage-pre,usage-post,pause,real,user,sys
+0,2800,5503.6,1150.6,334.830,334.69,1847.76,58.33
+1,2931,5510.9,1129.8,351.259,351.54,1930.59,62.14
+2,2942,5486.7,1134.5,352.078,352.2,1941.2,60.06
+3,2956,5513.3,1145.2,363.299,363.7,1984.61,65
+
+*** Mean values and deviations for 4 runs: ***
+Number of GCs:            : 2907.2 	(sstdev 72.2, (2.48%)
+Usage before GC (MB)      : 5503.6 	(sstdev 12.0, (.21%)
+Usage after GC (MB)       : 1140.0 	(sstdev 9.6, (.84%)
+Sum pause times (seconds) : 350.37 	(sstdev 11.7, (3.33%)
+Sum GC Real (seconds)     : 350.53 	(sstdev 11.9, (3.39%)
+Sum GC User (seconds)     : 1926.04 	(sstdev 57.2, (2.96%)
+Sum GC Sys (seconds)      : 61.38 	(sstdev 2.9, (4.72%)
+
+**** COH-OFF *****
+
+Processing results-COH-OFF-Parallel-FullGC-8G-0 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 11970, max-jOPS = 11900, critical-jOPS = 4439
+max: 11900 crit: 4439
+Processing results-COH-OFF-Parallel-FullGC-8G-1 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 12440, max-jOPS = 12038, critical-jOPS = 4050
+max: 12038 crit: 4050
+Processing results-COH-OFF-Parallel-FullGC-8G-2 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 12064, max-jOPS = 12315, critical-jOPS = 4162
+max: 12315 crit: 4162
+Processing results-COH-OFF-Parallel-FullGC-8G-3 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 13089, max-jOPS = 12453, critical-jOPS = 4298
+max: 12453 crit: 4298
+
+
+*** results of 4 runs: ***
+
+```
+run,maxjops,critjops,
+0,11900,4439,
+1,12038,4050,
+2,12315,4162,
+3,12453,4298,
+```
+
+*** Mean values and deviations for 4 runs: ***
+Max jOPS          : 12176.5 	(sstdev 252.5, (2.07%)
+Critical jOPS     : 4237.2 	(sstdev 168.4, (3.97%)
+
+**** COH-ON *****
+
+Processing results-COH-ON-Parallel-FullGC-8G-0 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 13089, max-jOPS = 12868, critical-jOPS = 4659
+max: 12868 crit: 4659
+Processing results-COH-ON-Parallel-FullGC-8G-1 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 12952, max-jOPS = 13007, critical-jOPS = 4927
+max: 13007 crit: 4927
+Processing results-COH-ON-Parallel-FullGC-8G-2 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 13134, max-jOPS = 12730, critical-jOPS = 4761
+max: 12730 crit: 4761
+Processing results-COH-ON-Parallel-FullGC-8G-3 ...
+RUN RESULT: hbIR (max attempted) = 13837, hbIR (settled) = 12976, max-jOPS = 12868, critical-jOPS = 5100
+max: 12868 crit: 5100
+
+
+*** results of 4 runs: ***
+
+```
+run,maxjops,critjops,
+0,12868,4659,
+1,13007,4927,
+2,12730,4761,
+3,12868,5100,
+```
+
+*** Mean values and deviations for 4 runs: ***
+Max jOPS          : 12868.2 	(sstdev 113.1, (.87%)
+Critical jOPS     : 4861.8 	(sstdev 193.5, (3.98%)
