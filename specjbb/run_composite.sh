@@ -14,12 +14,16 @@
 # when launching Composite mode in virtual environment with Time Server located on the native host.
 SPEC_OPTS=""
 
-WHATGC=-XX:+UseParallelGC
+#WHATGC=-XX:+UseParallelGC
 #WHATGC=-XX:+UseSerialGC
-#WHATGC=-XX:+UseG1GC
+WHATGC_DEFAULT="-XX:+UseG1GC"
+WHATGC=${WHATGC:-$WHATGC_DEFAULT}
+
+WHAT_MAX_HEAPSIZE_DEFAULT="-Xmx6g"
+WHAT_MAX_HEAPSIZE=${WHAT_MAX_HEAPSIZE:-$WHAT_MAX_HEAPSIZE}
 
 # Java options for Composite JVM
-JAVA_OPTS="$JVM_ARGS -Xlog:gc*  $WHATGC -Xms4g -Xms4g  "
+JAVA_OPTS="$JVM_ARGS -Xlog:gc*  $WHATGC $WHAT_MAX_HEAPSIZE "
 
 # Optional arguments for the Composite mode (-l <num>, -p <file>, -skipReport, etc.)
 MODE_ARGS="-ikv"
@@ -32,7 +36,8 @@ ISOLATE_CPUS_COMMAND_DEFAULT="chrt -r 1 taskset 0x3f "
 ISOLATE_CPUS_COMMAND=${ISOLATE_CPUS_COMMAND:-$ISOLATE_CPUS_COMMAND_DEFAULT}
 
 # Perf command
-PERF_COMMAND_DEFAULT=" perf stat  -B -e  L1-dcache-load-misses,L1-dcache-loads,LLC-load-misses,LLC-loads,dTLB-load-misses,dTLB-loads,instructions,branches "
+#PERF_COMMAND_DEFAULT="  perf stat  -B -e  L1-dcache-load-misses,L1-dcache-loads,LLC-load-misses,LLC-loads,dTLB-load-misses,dTLB-loads,instructions,branches "
+PERF_COMMAND_DEFAULT=" "
 PERF_COMMAND=${PERF_COMMAND:-$PERF_COMMAND_DEFAULT}
 
 PRECOMMAND="$ISOLATE_CPUS_COMMAND $PERF_COMMAND "
@@ -53,7 +58,6 @@ JDK_BASENAME=$(basename $JDK)
 
 JAVA=$JDK/bin/java
 
-$JAVA -Xlog:metaspace* -Xlog:metaspace=trace -version
 
 which $JAVA > /dev/null 2>&1
 if [ $? -ne 0 ]; then
@@ -84,8 +88,13 @@ for ((n=1; $n<=$NUM_OF_RUNS; n=$n+1)); do
   echo "Launching SPECjbb2015 in Composite mode..."
   echo
 
-  echo "Start Composite JVM"
-    $PRECOMMAND $JAVA $JAVA_OPTS $SPEC_OPTS -jar ../specjbb2015.jar -m COMPOSITE $MODE_ARGS 2>composite.log > composite.out &
+  echo "Start Composite JVM...."
+  COMMAND="$PRECOMMAND $JAVA $JAVA_OPTS $SPEC_OPTS -jar ../specjbb2015.jar -m COMPOSITE $MODE_ARGS"
+  echo "Command line: $COMMAND"
+
+  ${COMMAND} 2>composite.log > composite.out &
+
+#    $PRECOMMAND $JAVA $JAVA_OPTS $SPEC_OPTS -jar ../specjbb2015.jar -m COMPOSITE $MODE_ARGS 2>composite.log > composite.out &
 
     COMPOSITE_PID=$!
     echo "Composite JVM PID = $COMPOSITE_PID"
