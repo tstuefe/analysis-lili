@@ -2,47 +2,27 @@
 
 set -oeu pipefail
 
-# $1 pid
-# $2 name
-function exit_if_process_not_found () {
-	if [ ! -d "/proc/$1" ]; then
-		echo "Process not found ($1 $2)"
-		exit -1
-	fi
-}
+SCRIPTDIR=`realpath "$0" | xargs dirname`
 
-function kill_process () {
-	if [ -d "/proc/$1" ]; then
-		echo "Killing $1 (SIGTERM)"
-		kill -term $1
-		sleep 2 
-		if [ -d "/proc/$1" ]; then
-			echo "Killing $1 (SIGKILL)"
-			kill -9 $1
-			if [ -d "/proc/$1" ]; then
-				echo "**** $1 is unkillable!"
-			fi
-		fi
-	fi
+source "${SCRIPTDIR}/common-functions.sh"
 
-}
+############# Initial tests ########################################
 
-# Start command $1
-# Basename for log $2
-function start_process () {
-	echo "Calling $1" >> $COMMANDS_LOG
-	$1 > "${DIR}/${2}.out" 2> "${DIR}/${2}.err" &
-	PID=$!
-} 
+exit_if_not_root
 
-##### parameters
+exit_if_machine_is_not_stabilized_for_benchmarks
+
+exit_if_port_is_occupied "8080"
+
+
+#### parameters
 
 # Test ID
 TESTNAME_DEFAULT="KANNWEG"
 TESTNAME=${TESTNAME:-$TESTNAME_DEFAULT}
 
 # The JDK we test
-JDK_TO_TEST_DEFAULT="${PWD}/../jdk-liliput"
+JDK_TO_TEST_DEFAULT="I-DONT-KNOW"
 JDK_TO_TEST="${JDK_TO_TEST:-$JDK_TO_TEST_DEFAULT}"
 
 WHATGC_DEFAULT="-XX:+UseG1GC"
@@ -67,50 +47,21 @@ FULL_GC_PERIOD_DEFAULT=""
 FULL_GC_PERIOD=${FULL_GC_PERIOD:-$FULL_GC_PERIOD_DEFAULT}
 
 # The jmeter script name
-#JMETER_SCRIPT="./petclinic_test_plan-300secs.jmx"
-JMETER_SCRIPT="./petclinic_test_plan-short.jmx"
+JMETER_SCRIPT="${SCRIPTDIR}/petclinic_test_plan-short.jmx"
 
 # Number of seconds we wait for spring petclinic to finish startup
 STARTUPTIME=10
 
-
-############# Initial tests ########################################
-
-if [ `id -u` -ne 0 ] 
-  then echo Please run this script as root or using sudo!
-  exit -1
-fi
-
-if [[ `sysctl kernel.randomize_va_space` != "kernel.randomize_va_space = 0" ]]; then
-        echo "stabilize machine for benchmark!";
-	exit -1
-fi
-
-# we expect to have CPUs 1-16 isolated
-for KERNELPARAM in "isolcpus=0-15" "nohz_full=0-15"; do
-	if [ "`cat /proc/cmdline | grep $KERNELPARAM`" == "" ]; then
-		echo "kernel param missing: $KERNELPARAM"
-		exit -1
-	fi
-done
-
-if [ "`netstat -nlp | grep :8080`" != "" ]; then
-	echo "Someone already listening to port 8080"
-	exit -1
-fi
-
 ########## Prepare test dir #########################################
 
-DIR="./result-${TESTNAME}"
+RESULTDIR="./results-${TESTNAME}"
 
-if [ -d "$DIR" ]; then
-	rm -rf "$DIR"
-fi
+create_dir_delete_old "${RESULTDIR}"
 
-mkdir "$DIR"
+pushd "$RESULTDIR"
 
 # contains all executed commands
-COMMANDS_LOG="${DIR}/commands.log"
+COMMANDS_LOG="./commands.log"
 
 ########## Fork off Spring, perf (if needed) and the periodic jcmd
 ##########    runner (if needed) ###################################
@@ -120,8 +71,8 @@ echo "PID of start script $0 : $$"
 # Fork off spring
 # We run spring on CPUs 0..11
 TASKSET_SPRING="0xFFF"
-GCLOG="-Xlog:gc -Xlog:metaspace*"
-COMMAND="chrt -r 1 taskset ${TASKSET_SPRING} ${JDK_TO_TEST}/bin/java $WHATGC $WHAT_MAX_HEAPSIZE $JVM_ARGS $GCLOG -jar ./spring-petclinic-2.5.0-SNAPSHOT.jar"
+GCLOG="-Xlog:gc* -Xlog:metaspace*"
+COMMAND="chrt -r 1 taskset ${TASKSET_SPRING} ${JDK_TO_TEST}/bin/java $WHATGC $WHAT_MAX_HEAPSIZE $JVM_ARGS $GCLOG -jar ${SCRIPTDIR}/spring-petclinic-2.5.0-SNAPSHOT.jar"
 start_process "$COMMAND" "spring-petclinic"
 SPRING_PID=$PID
 echo "PID of spring process: $SPRING_PID"
@@ -136,7 +87,7 @@ fi
 
 # Fork off jcmd for periodic full gc
 if [ "$FULL_GC_PERIOD" != "" ]; then
-	COMMAND="bash ./periodically-jcmd.sh ${FULL_GC_PERIOD} ${SPRING_PID}"
+	COMMAND="bash ${SCRIPTDIR}/periodically-jcmd.sh ${FULL_GC_PERIOD} ${SPRING_PID}"
 	start_process "$COMMAND" "jcmd"
 	JCMD_PID=$PID
 	echo "PID of jcmd script: $JCMD_PID"
@@ -147,39 +98,34 @@ sleep ${STARTUPTIME}
 
 # Sanity checks: All processes  should still be up
 
-exit_if_process_not_found $SPRING_PID
+exit_if_process_not_found $SPRING_PID "spring petclinic"
 if [ "$FULL_GC_PERIOD" != "" ]; then
-	exit_if_process_not_found $JCMD_PID
+	exit_if_process_not_found $JCMD_PID "jcmd looper"
 fi
 if [ "$PERF_COMMAND" != "" ]; then
-	exit_if_process_not_found $PERF_PID
+	exit_if_process_not_found $PERF_PID "perf monitor"
 fi
 
 ########## Start jmeter and wait until its finished ###################################
 
-JMETER_OPTIONS="-H localhost -P 8080 -t ${JMETER_SCRIPT} -n -e -l ${DIR}/jmeter.jtl -o ${DIR}/jmeter-report"
+JMETER_OPTIONS="-H localhost -P 8080 -t ${JMETER_SCRIPT} -n -e -l ./jmeter.jtl -o ./jmeter-report"
 
 # We run jmeter on CPUs 12..15
 TASKSET_JMETER="0xF000"
-COMMAND="chrt -r 1 taskset ${TASKSET_JMETER} ${JDK_TO_TEST}/bin/java -jar ./apache-jmeter-5.6.3/bin/ApacheJMeter.jar ${JMETER_OPTIONS}"
+COMMAND="chrt -r 1 taskset ${TASKSET_JMETER} ${JDK_TO_TEST}/bin/java -jar ${SCRIPTDIR}/apache-jmeter-5.6.3/bin/ApacheJMeter.jar ${JMETER_OPTIONS}"
 start_process "$COMMAND" "jmeter"
 JMETER_PID=$PID
 echo "PID of jmeter process: $JMETER_PID"
 
 # wait wait wait wait wait
-while kill -0 "$JMETER_PID" 2> /dev/null; do sleep 1; done;
-
-# big sigh - jmeter.log goes into the current dir, and its just simpler to move it to the
-# result dir manually
-if [ -f "./jmeter.log" ]; then
-	mv "./jmeter.log" "$DIR"
-fi
+echo "Waiting for jmeter to finish..."
+wait_for_process_to_finish "$JMETER_PID"
 
 # stop spring 
 
 # this should also kill perf and jcmd if they are running, but to be sure we kill them manually further down
 # (and hope pids did not get reused in that time)
-echo "Waiting for jmeter to finish..."
+echo "Stopping Spring and dependend processes..."
 kill_process $SPRING_PID
 
 if [ ! -z "${JCMD_PID:-}" ]; then
@@ -192,7 +138,10 @@ fi
 
 sleep 2
 
+popd
+
 chown -R thomas .
 
 echo "Done."
+
 

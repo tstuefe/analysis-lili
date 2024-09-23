@@ -10,7 +10,7 @@
 #
 # Note: creates a temporary directory called <prefix>-temp for temp data
 
-set -euo pipefail
+set -euo 
 
 function print_usage_and_exit () {
 	echo "Usage: $0 <prefix> <JVM log file> [<JVM log file> ...]"
@@ -25,7 +25,7 @@ fi
 PREFIX=$1
 
 # prevent stupid  errors
-if [ -d $1 -o -f $1 ]; then
+if [ -d "$1" -o -f "$1" ]; then
 	echo "First argument, $1, is an existing directory or file."
 	print_usage_and_exit;
 fi

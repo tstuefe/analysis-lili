@@ -21,7 +21,7 @@ fi
 PREFIX=$1
 
 # prevent stupid  errors
-if [ -d $1 -o -f $1 ]; then
+if [ -d "$1" -o -f "$1" ]; then
 	echo "First argument, $1, is an existing directory or file."
 	print_usage_and_exit;
 fi
@@ -82,6 +82,11 @@ for FILE in $*; do
 	if [ ! -f $FILE ]; then
 		echo "$FILE does not exist or is not a file"
 		exit -1
+	fi
+
+	if ! grep -q "Performance counter stats" "$FILE" ; then
+		echo "No performance counter stats found in $FILE; skipping perf result scan"
+		exit 0
 	fi
 
 	l1_misses=$(scan_counter "$FILE" "L1-dcache-load-misses")
