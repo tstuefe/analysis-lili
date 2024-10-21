@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Given a set of result directories, for each director, scans the output file
-# for JVM metrics:
-# - GC log messages, liveset size after GC
-# - GC log messages, gc pause times
+# Given a set of files containing GC log output, scans each file
+# for JVM metrics.
 #
 # Then it generates an result file called <prefix>-jvm-metrics.csv containing
 # the accumulated values (sum gc pause times and mean liveset size)
@@ -13,7 +11,7 @@
 set -eu 
 
 function print_usage_and_exit () {
-	echo "Usage: $0 <prefix> <JVM log file> [<JVM log file> ...]"
+	echo "Usage: $0 <some-prefix> <JVM log file> [<JVM log file> ...]"
 	echo "e.g. $0 COH-OFF results-COH-OFF*/composite.out"
 	exit -1
 }
