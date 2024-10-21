@@ -10,7 +10,7 @@
 #
 # Note: creates a temporary directory called <prefix>-temp for temp data
 
-set -euo 
+set -eu 
 
 function print_usage_and_exit () {
 	echo "Usage: $0 <prefix> <JVM log file> [<JVM log file> ...]"
